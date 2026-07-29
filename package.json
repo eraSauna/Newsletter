@@ -1,0 +1,15 @@
+{
+  "name": "erasauna-newsletter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Wekelijkse eräSauna Market & Location Intelligence-nieuwsbrief (split: goedkoop lezen + Opus-eindredactie).",
+  "scripts": {
+    "edition": "node run-edition.mjs",
+    "render": "python3 md-to-email.py",
+    "test:cadence": "node --test test/"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0"
+  }
+}
