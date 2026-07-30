@@ -1,18 +1,19 @@
-// Editorial layer: Opus turns the collected findings into the newsletter
-// markdown, following the megaprompt structure. One pass per edition.
+// Laag 4 — eindredactie + strategische conclusies (Opus). Zet de gestructureerde,
+// geverifieerde findings uit laag 3 om in de nieuwsbrief-markdown volgens de
+// megaprompt-structuur. Eén pass per editie.
 
+import Anthropic from "@anthropic-ai/sdk";
 import { readFile } from "node:fs/promises";
 
 /**
- * @returns {Promise<{markdown: string, usd: number}>}
+ * @returns {Promise<{markdown: string}>}
  */
-export async function synthesize(client, { model, meta, findings, ledger, promptPath }) {
+export async function synthesize({ model, meta, findings, promptPath, ledger }) {
+  const client = new Anthropic(); // ANTHROPIC_API_KEY uit env
   const editorialPrompt = await readFile(promptPath, "utf8");
 
   const activeList = meta.active.map((b) => `${b.id}. ${b.title}`).join("\n");
-  const findingsBlock = findings
-    .map((f) => `## Findings — ${f.label}\n\n${f.text}`)
-    .join("\n\n---\n\n");
+  const findingsJson = JSON.stringify(findings, null, 2);
 
   const userMessage = `Editie-context:
 - Weeknummer: ${meta.week}
@@ -23,13 +24,15 @@ export async function synthesize(client, { model, meta, findings, ledger, prompt
 Neem in deze editie UITSLUITEND deze secties op (in deze volgorde):
 ${activeList}
 
-Hieronder de ruwe research-findings per blok. Dedupliceer, pas de selectie- en
-scoringscriteria toe, en schrijf de nieuwsbrief in markdown volgens de
-sectiestructuur en stijlregels. Verzin geen bronnen of data die niet in de
-findings staan; markeer plan/voorstel vs. definitief; elke bron als klikbare
-link.
+Hieronder de geverifieerde findings (JSON) uit de leeslaag. Ze zijn al gefilterd
+en gescoord; jouw taak is redactie: dedupliceer resterende overlap, kies de
+sterkste items per sectie (liever 15 sterke dan 50 matige), schrijf volgens de
+sectiestructuur en stijlregels, en trek de strategische conclusies/acties. Neem
+alleen bronnen en feiten over die in de findings staan; markeer plan/voorstel vs.
+definitief; elke bron als klikbare link.
 
-${findingsBlock}`;
+FINDINGS:
+${findingsJson}`;
 
   ledger?.assertUnderCap();
   const stream = client.messages.stream({
@@ -41,12 +44,11 @@ ${findingsBlock}`;
     messages: [{ role: "user", content: userMessage }],
   });
   const res = await stream.finalMessage();
+  ledger?.record(model, res.usage, { label: "editorial" });
 
-  const usd = ledger?.record(model, res.usage, { label: "editorial" }) ?? 0;
   const markdown = res.content
     .filter((b) => b.type === "text")
     .map((b) => b.text)
     .join("\n");
-
-  return { markdown, usd };
+  return { markdown };
 }

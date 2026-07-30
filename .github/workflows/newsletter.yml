@@ -1,0 +1,71 @@
+name: Weekly newsletter
+
+# Maandagochtend een editie bouwen (research + Opus-eindredactie + render).
+# Verzenden is bewust gescheiden: standaard alleen bouwen + archiveren; sturen
+# gebeurt via een handmatige run (workflow_dispatch met send=true).
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # maandag 06:00 UTC
+  workflow_dispatch:
+    inputs:
+      send:
+        description: "Ook verzenden naar info@erasauna.nl?"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write # om de gebouwde editie terug te committen naar state/
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      FILTER_MODEL: ${{ vars.FILTER_MODEL || 'gemini-3.1-flash-lite' }}
+      READER_MODEL: ${{ vars.READER_MODEL || 'gemini-3.6-flash' }}
+      AUDIT_MODEL: ${{ vars.AUDIT_MODEL || 'gemini-3.6-flash' }}
+      EDITORIAL_MODEL: ${{ vars.EDITORIAL_MODEL || 'claude-opus-4-8' }}
+      MONTHLY_CAP_USD: ${{ vars.MONTHLY_CAP_USD || '15' }}
+      AUDIT_SAMPLE_SIZE: ${{ vars.AUDIT_SAMPLE_SIZE || '20' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - run: npm install
+
+      - name: Bouw editie (research + eindredactie)
+        run: node run-edition.mjs
+
+      - name: Bepaal editie-map
+        id: edition
+        run: echo "dir=$(ls -d state/*/ | sort | tail -1)" >> "$GITHUB_OUTPUT"
+
+      - name: Render naar e-mail-HTML
+        run: python3 md-to-email.py "${{ steps.edition.outputs.dir }}newsletter.md" > "${{ steps.edition.outputs.dir }}newsletter.html"
+
+      - name: Archiveer editie in de repo
+        run: |
+          git config user.name "eräSauna"
+          git config user.email "info@erasauna.nl"
+          git add state/
+          git commit -m "editie: ${{ steps.edition.outputs.dir }}" || echo "geen wijzigingen"
+          git push || echo "push overgeslagen"
+
+      - name: Upload editie als artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsletter
+          path: ${{ steps.edition.outputs.dir }}
+
+      - name: Verzenden (alleen bij handmatige run met send=true)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.send }}
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NEWSLETTER_FROM: ${{ vars.NEWSLETTER_FROM || 'eräSauna Intelligence <intel@erasauna.nl>' }}
+          NEWSLETTER_TO: ${{ vars.NEWSLETTER_TO || 'info@erasauna.nl' }}
+        run: node send-newsletter.mjs "${{ steps.edition.outputs.dir }}newsletter.html" "eräSauna Market & Location Intelligence"

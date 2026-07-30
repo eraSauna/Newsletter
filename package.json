@@ -1,15 +1,16 @@
 {
   "name": "erasauna-newsletter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "Wekelijkse eräSauna Market & Location Intelligence-nieuwsbrief (split: goedkoop lezen + Opus-eindredactie).",
+  "description": "Wekelijkse eräSauna Market & Location Intelligence-nieuwsbrief. Vier-lagen-funnel: verzamelen → Gemini-filter → Gemini-lezen/verifiëren → Opus-eindredactie.",
   "scripts": {
     "edition": "node run-edition.mjs",
-    "render": "python3 md-to-email.py",
-    "test:cadence": "node --test test/"
+    "render": "python3 md-to-email.py"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.68.0"
+    "@anthropic-ai/sdk": "^0.68.0",
+    "@google/genai": "^1.30.0",
+    "rss-parser": "^3.13.0"
   }
 }

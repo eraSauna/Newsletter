@@ -5,21 +5,27 @@ Wekelijkse market-, locatie- en concurrentie-intelligence voor eräSauna
 kansen in **Nederland, België, Frankrijk en Duitsland**, met Groot-Brittannië en
 Denemarken als trendwatch. Elke maandag één e-mail naar `info@erasauna.nl`.
 
-## Architectuur (split)
+## Architectuur — vier-lagen-funnel
 
-Goedkoop lezen, duur schrijven:
+Elke laag ziet minder items, zodat de dure modellen klein blijven. Goedkoop
+filteren, duur schrijven.
 
 ```
-cadans (welke blokken deze week)
-   → research.mjs   — reading model (Haiku) zoekt + leest via web_search/web_fetch
-   → synthesize.mjs — Opus schrijft de nieuwsbrief (EDITORIAL-PROMPT.md)
-   → md-to-email.py — markdown → e-mail-HTML
-   → send-newsletter.mjs — Resend → info@erasauna.nl   (aparte, expliciete stap)
+1. collect   RSS + vaste bronnen + Google Search grounding      → kandidaten
+2. filter    Gemini 3.1 Flash-Lite: dedup + grove filtering      → doorlaters
+3. read      Gemini 3.6 Flash: lezen, verifiëren, relevantiescore → findings
+3b. audit    steekproef afgewezen items opnieuw beoordeeld        → gemiste-leads-log
+4. synthesize Opus 4.8: nieuwsbrief + strategische conclusies      → newsletter.md
+   → md-to-email.py (HTML) → send-newsletter.mjs (Resend, aparte go)
 ```
 
-Het lezen kost de meeste tokens en draait daarom op een goedkoop model; alleen de
-eindredactie draait op Opus. Kosten worden per call gelogd (`lib/cost.mjs`) met
-een harde maandcap.
+Twee providers: Google Gemini (lagen 1-3) en Anthropic (laag 4). Modellen per
+laag staan als env-var (`config.mjs` / `.env`), dus bijstellen kan zonder
+codewijziging. De audit-steekproef (3b) borgt dat de goedkope filter geen echte
+leads weggooit — false-negatives zijn hier de dure fout.
+
+Bestanden per laag: `lib/collect.mjs`, `lib/filter.mjs`, `lib/read.mjs`,
+`lib/audit.mjs`, `synthesize.mjs`. Orchestratie: `run-edition.mjs`.
 
 ## Cadans — één maandag-mail die meegroeit
 
@@ -29,40 +35,47 @@ een harde maandcap.
 | Hubs, concurrentie (bij beweging), UK/DK-trendwatch, product-innovatie | tweewekelijks (even weken) |
 | Reviewmonitor, prijs-/boekingsmonitor | elke 8 weken |
 
-Zie `WEEKLY-BRIEF.md` voor de volledige runbook en `EDITORIAL-PROMPT.md` voor de
-redactie-instructie.
+Zie `WEEKLY-BRIEF.md` (runbook) en `EDITORIAL-PROMPT.md` (redactie-instructie).
 
 ## Draaien
 
 ```bash
 npm install
-cp .env.example .env      # vul ANTHROPIC_API_KEY etc.
-node run-edition.mjs      # research + eindredactie → state/JAAR-Www/newsletter.md
+cp .env.example .env      # vul GOOGLE_API_KEY, ANTHROPIC_API_KEY etc.
+node run-edition.mjs      # funnel → state/JAAR-Www/newsletter.md (+ findings.json, audit.json)
 python3 md-to-email.py state/2026-W31/newsletter.md > state/2026-W31/newsletter.html
-# verzenden is een aparte, expliciete stap:
-node send-newsletter.mjs state/2026-W31/newsletter.html "Onderwerpregel"
+node send-newsletter.mjs state/2026-W31/newsletter.html "Onderwerpregel"   # aparte go
 ```
 
-`run-edition.mjs` verstuurt niets — het schrijft alleen de editie. Verzenden
-gebeurt bewust apart.
+`run-edition.mjs` verstuurt niets — het schrijft alleen de editie. Verzenden is
+bewust apart.
 
-## Kosten
+## Kosten (schatting)
 
-- Reading (Haiku) ~$1-3,5/mnd, editorial (Opus) ~$3-4/mnd → **~$5-7/mnd gesplitst.**
-- Elke run logt tokens + kosten naar `state/cost-YYYY-MM.json`.
-- `MONTHLY_CAP_USD` weigert calls boven de maandlimiet; zet ook een spend limit in
-  de Anthropic Console. De WebSearch-vergoeding per zoekopdracht staat als
-  schatting in `lib/cost.mjs` (tarief nog te verifiëren).
+| Laag | Model | ~/maand |
+| --- | --- | ---: |
+| 2. filter | Gemini 3.1 Flash-Lite | ~$0,15 |
+| 3. read + audit | Gemini 3.6 Flash | ~$4 |
+| 4. eindredactie | Opus 4.8 | ~$4 |
+| grounding | Google Search | ~$0-1 (binnen gratis quotum) |
+| **Totaal** | | **~$8-10/maand** |
+
+Elke run logt tokens + kosten naar `state/cost-YYYY-MM.json`. `MONTHLY_CAP_USD`
+weigert calls boven de maandlimiet; zet ook een spend limit in de Anthropic
+Console. Prijzen staan in `lib/cost.mjs` (geverifieerd juli 2026 — check bij
+wijziging). Batch-korting (~50%) op de Gemini-lagen kan het totaal verder drukken.
 
 ## Status — automatiseren
 
-Klaar en getest: cadans, kosten-log/cap, mailer, renderer, editorial-prompt,
-runbook, proefeditie (`docs/`).
+Klaar: funnel-code (4 lagen + audit), cadans, kosten-log/cap, mailer, renderer,
+editorial-prompt, runbook, proefeditie (`docs/`), GitHub Actions-workflow.
 
 Nog nodig om live te gaan (eräSauna-eigen accounts):
-1. **Anthropic API-key** (`ANTHROPIC_API_KEY`) — dan draait research + eindredactie.
+1. **GOOGLE_API_KEY** (Gemini) en **ANTHROPIC_API_KEY** (Opus) — als repo-secrets.
 2. **Resend-key + geverifieerd `erasauna.nl`-domein** — dan kan verzonden worden.
-3. **Maandag-scheduler** die `run-edition.mjs` draait (cron/hosted runner).
+3. **Eén live smoke-test** — de Gemini-SDK-calls (grounding, schema) zijn tegen de
+   juli-2026-SDK geschreven; eerste run verifieert de veldnamen.
+4. Bronnenlijst in `config.mjs` uitbreiden per markt/regio.
 
 ## Regels
 
