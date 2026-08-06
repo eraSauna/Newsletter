@@ -1,12 +1,13 @@
-name: Weekly newsletter
+name: Newsletter
 
-# Maandagochtend een editie bouwen (research + Opus-eindredactie + render).
-# Verzenden is bewust gescheiden: standaard alleen bouwen + archiveren; sturen
-# gebeurt via een handmatige run (workflow_dispatch met send=true).
+# Draait elke maandag, maar run-edition.mjs bouwt alleen in EVEN ISO-weken
+# (tweewekelijks); oneven weken stopt het script direct. Verzenden is bewust
+# gescheiden: standaard alleen bouwen + archiveren; sturen gebeurt via een
+# handmatige run (workflow_dispatch met send=true).
 
 on:
   schedule:
-    - cron: "0 6 * * 1" # maandag 06:00 UTC
+    - cron: "0 6 * * 1" # elke maandag 06:00 UTC; code gate = even weken (2-wekelijks)
   workflow_dispatch:
     inputs:
       send:

@@ -13,6 +13,8 @@ filteren, duur schrijven.
 ```
 1. collect   RSS + vaste bronnen + Google Search grounding      → kandidaten
 2. filter    Gemini 3.1 Flash-Lite: dedup + grove filtering      → doorlaters
+2b. dedup    tegen state/seen.json (geheugen): herhaling eruit,   → nieuw + updates
+             updates gemarkeerd
 3. read      Gemini 3.6 Flash: lezen, verifiëren, relevantiescore → findings
 3b. audit    steekproef afgewezen items opnieuw beoordeeld        → gemiste-leads-log
 4. synthesize Opus 4.8: nieuwsbrief + strategische conclusies      → newsletter.md
@@ -24,16 +26,22 @@ laag staan als env-var (`config.mjs` / `.env`), dus bijstellen kan zonder
 codewijziging. De audit-steekproef (3b) borgt dat de goedkope filter geen echte
 leads weggooit — false-negatives zijn hier de dure fout.
 
-Bestanden per laag: `lib/collect.mjs`, `lib/filter.mjs`, `lib/read.mjs`,
-`lib/audit.mjs`, `synthesize.mjs`. Orchestratie: `run-edition.mjs`.
+**Geheugen (`state/seen.json`).** Blijft in de repo staan en wordt elke editie
+eerst gelezen: al behandelde ontwikkelingen worden eruit gefilterd (laag 2b), dus
+geen herhaald nieuws. Materiële veranderingen (nieuwe status/datum/prijs) komen
+terug als *update*. Na elke editie worden de behandelde ontwikkelingen weer
+weggeschreven, en de Actions-workflow commit `state/` terug naar de repo.
 
-## Cadans — één maandag-mail die meegroeit
+Bestanden per laag: `lib/collect.mjs`, `lib/filter.mjs`, `lib/dedup.mjs`,
+`lib/read.mjs`, `lib/audit.mjs`, `lib/memory.mjs`, `synthesize.mjs`. Orchestratie:
+`run-edition.mjs`.
 
-| Blok | Cadans |
-| --- | --- |
-| Signalen, locatiekansen, zwemwater/regelgeving, partners, watchlist, acties | wekelijks |
-| Hubs, concurrentie (bij beweging), UK/DK-trendwatch, product-innovatie | tweewekelijks (even weken) |
-| Reviewmonitor, prijs-/boekingsmonitor | elke 8 weken |
+## Cadans — tweewekelijks
+
+Eén editie per **twee weken** (even ISO-weken). De scheduler draait elke maandag,
+maar `run-edition.mjs` slaat oneven weken over. Review- en prijsmonitor draaien
+elke **4 weken** mee (elke tweede editie). Herhaling wordt niet door de cadans
+maar door het seen-geheugen voorkomen.
 
 Zie `WEEKLY-BRIEF.md` (runbook) en `EDITORIAL-PROMPT.md` (redactie-instructie).
 

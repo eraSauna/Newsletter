@@ -25,6 +25,14 @@ twaalf maanden tot een commerciële actie kan leiden. Liever 15 sterke items dan
 elke bron als klikbare link; vermeld publicatiedatum (+ datum gebeurtenis als
 anders). Geen dubbele items over dezelfde ontwikkeling.
 
+UPDATES EN HERHALING
+De findings zijn al ontdubbeld tegen eerdere edities: herhalingen zijn eruit
+gefilterd. Findings met `"update": true` gaan over een ontwikkeling die eräSauna
+eerder behandelde, maar met een materiële verandering (nieuwe status, datum,
+prijs, opening, vergunning). Behandel die kort en expliciet als update ("Update:
+…"), en beschrijf alleen wat er is veranderd — herhaal de oorspronkelijke
+context niet. Voeg nooit een ontwikkeling toe die niet in de findings staat.
+
 LOCATIESCORE (0-100, toon volledige score alleen bij de top-3 locaties)
 Water/natuur/uitzicht 20, bezoekers/doelgroep 15, locatiepartner 15, techniek 15,
 regelgeving 15, commercieel potentieel 10, concurrentie 5, strategische waarde 5.

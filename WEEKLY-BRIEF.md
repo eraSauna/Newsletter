@@ -25,31 +25,29 @@ Eén e-mail per maandag. De kans-kern gaat altijd mee; de andere blokken liften
 mee wanneer ze aan de beurt zijn. Zo blijft de wekelijkse mail kort, met periodiek
 een vollere editie.
 
+Eén editie per **twee weken** (even ISO-weken). De scheduler draait elke maandag,
+maar de code stopt in oneven weken. Elke editie bevat het volle blokkenset;
+review- en prijsmonitor komen elke **4 weken** mee (elke tweede editie).
+
 | Blok (megaprompt-sectie) | Cadans |
 | --- | --- |
-| 1. Belangrijkste signalen van de week | **wekelijks** |
-| 2. Nieuwe locatiekansen | **wekelijks** |
-| 3. Zwemwater, waterrecreatie & lokale regelgeving | **wekelijks** |
-| 10. Partner- en acquisitiesignalen | **wekelijks** |
-| 11. Watchlist | **wekelijks** |
-| 12. Concrete acties | **wekelijks** |
-| 4. Outdoor sauna- en wellness-hubs | **tweewekelijks** |
-| 5. Concurrentiemonitor | **tweewekelijks, alleen bij beweging** (zie regel hieronder) |
-| 8. Groot-Brittannië & Denemarken trendwatch | **tweewekelijks** |
-| 9. Product- en operationele innovaties | **tweewekelijks** |
-| 6. Reviewmonitor | **elke 8 weken** |
-| 7. Prijs- en boekingsmonitor | **elke 8 weken** |
+| 1, 2, 3, 4, 5, 8, 9, 10, 11, 12 (signalen, locaties, zwemwater, hubs, concurrentie, trendwatch, innovatie, partners, watchlist, acties) | **elke editie (2-wekelijks)** |
+| 6. Reviewmonitor | **elke 4 weken** |
+| 7. Prijs- en boekingsmonitor | **elke 4 weken** |
 
 **Concurrentie-regel (sectie 5):** neem een concurrent alleen op als er
 werkelijk iets gebeurt (nieuwe locatie, prijswijziging, uitbreiding, nieuwe
 toetreder in een doelmarkt of nabij een doellocatie). Gebeurt er niets, dan
 niets schrijven — geen "geen nieuws"-regel.
 
-**Welke week draait wat:** bepaal aan de hand van het ISO-weeknummer.
-- Tweewekelijkse blokken: in **even** ISO-weken.
-- 8-weekse blokken: wanneer `weeknummer % 8 == 0`.
-Bij twijfel of overslag: het vorige-editie-archief (`state/`) toont wanneer een
-blok voor het laatst draaide — draai het als het > cadans geleden is.
+**Geheugen tegen herhaling (`state/seen.json`).** Elke editie wordt éérst tegen
+het geheugen gededupliceerd (laag 2b): al behandelde ontwikkelingen vallen af,
+zodat je geen herhaald nieuws krijgt. Alleen nieuwe ontwikkelingen en materiële
+*updates* (nieuwe status/datum/prijs) blijven over. Na de editie worden de
+behandelde ontwikkelingen weggeschreven en door de workflow terug gecommit.
+
+**Welke week draait wat:** even ISO-week = editie; `weeknummer % 4 == 0` = ook
+review/prijs. Oneven weken: geen editie.
 
 ## Wat de agent per run doet
 
