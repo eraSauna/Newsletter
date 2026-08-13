@@ -95,6 +95,78 @@
       ],
       "firstSeen": "2026-W33",
       "lastSeen": "2026-W33"
+    },
+    {
+      "key": "ondernemer-gezocht-voor-de-weide-in-bleiswijkse-zoom",
+      "title": "Ondernemer gezocht voor de Weide in Bleiswijkse Zoom",
+      "place": "",
+      "country": "",
+      "status": "tender",
+      "urls": [
+        "https://www.staatsbosbeheer.nl/projecten/rottemeren/horeca-de-weide"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "nieuwe-zwemzone-in-diksmuide-tijdelijk-gesloten-door-groei-van-blauwalgen-diksmu",
+      "title": "Nieuwe zwemzone in Diksmuide tijdelijk gesloten door groei van blauwalgen",
+      "place": "Diksmuide",
+      "country": "BE",
+      "status": "geopend",
+      "urls": [
+        "https://kw.be/nieuws/natuur/nieuwe-zwemzone-in-diksmuide-tijdelijk-gesloten-door-groei-van-blauwalgen-hopelijk-kan-de-zwemzone-zo-snel-mogelijk-weer-op-een-veilige-manier-openen/"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "zwemwater-in-vlaanderen-scoort-zeer-goed-vlaanderen-be",
+      "title": "Zwemwater in Vlaanderen scoort zeer goed",
+      "place": "Vlaanderen",
+      "country": "BE",
+      "status": "definitief",
+      "urls": [
+        "https://vmm.vlaanderen.be/nieuws/zwemwater-in-vlaanderen-scoort-zeer-goed"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "reouverture-de-la-baignade-et-des-activites-nautiques-a-la-base-de-loisirs-les-3",
+      "title": "Réouverture de la baignade et des activités nautiques à la base de loisirs « Les 3 lacs »",
+      "place": "Serre-Ponçon Val d'Avance",
+      "country": "FR",
+      "status": "geopend",
+      "urls": [
+        "https://www.serreponcon-valdavance.fr/reouverture-de-la-baignade-et-des-activites-nautiques-a-la-base-de-loisirs-les-3-lacs"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "la-baignade-et-la-peche-a-pied-sont-interdites-sur-la-plage-de-port-lenn-a-arzon",
+      "title": "La baignade et la pêche à pied sont interdites sur la plage de Port-Lenn, à Arzon",
+      "place": "Arzon",
+      "country": "FR",
+      "status": "definitief",
+      "urls": [
+        "https://www.facebook.com/MairieArzon/posts/123456789"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "can-the-crowd-do-the-work-of-a-grant-bristol-community-sauna-says-yes-bristol-uk",
+      "title": "Can the crowd do the work of a grant? Bristol Community Sauna says yes",
+      "place": "Bristol",
+      "country": "UK",
+      "status": "aangekondigd",
+      "urls": [
+        "https://www.crowdfunder.co.uk/p/bristol-community-sauna-expansion"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
     }
   ]
 }
