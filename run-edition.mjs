@@ -34,7 +34,7 @@ function isoParts(now) {
 
 async function main() {
   const now = new Date();
-  const { active, week, isEdition, extended } = blocksForDate(now);
+  const { active, week, isEdition, extended } = blocksForDate(now, process.env.FORCE_EDITION === "true");
 
   if (!isEdition) {
     console.log(`[edition] week ${week} — geen editie (tweewekelijks, alleen even weken). Gestopt.`);

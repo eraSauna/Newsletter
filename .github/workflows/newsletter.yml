@@ -14,6 +14,10 @@ on:
         description: "Ook verzenden naar info@erasauna.nl?"
         type: boolean
         default: false
+      force:
+        description: "Forceer bouwen ook in een niet-editie (oneven) week?"
+        type: boolean
+        default: false
 
 permissions:
   contents: write # om de gebouwde editie terug te committen naar state/
@@ -30,6 +34,7 @@ jobs:
       EDITORIAL_MODEL: ${{ vars.EDITORIAL_MODEL || 'claude-opus-4-8' }}
       MONTHLY_CAP_USD: ${{ vars.MONTHLY_CAP_USD || '15' }}
       AUDIT_SAMPLE_SIZE: ${{ vars.AUDIT_SAMPLE_SIZE || '20' }}
+      FORCE_EDITION: ${{ inputs.force }}
     steps:
       - uses: actions/checkout@v4
 
