@@ -1,1 +1,124 @@
-{"developments": []}
+{
+  "developments": [
+    {
+      "key": "nieuws-uit-de-regio-zeist-onderzoekt-mogelijkheden-voor-stadsstrand-of-recreatie",
+      "title": "Nieuws uit de regio: Zeist onderzoekt mogelijkheden voor stadsstrand of recreatieplas",
+      "place": "Zeist",
+      "country": "NL",
+      "status": "onderzoek",
+      "urls": [
+        "https://www.oogopzeist.nl/"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "provincie-antwerpen-zoekt-ondernemer-voor-bruisende-zilvermeerhaven-mol-be",
+      "title": "Provincie Antwerpen zoekt ondernemer voor bruisende Zilvermeerhaven",
+      "place": "Mol",
+      "country": "BE",
+      "status": "tender",
+      "urls": [
+        "https://cartoon-productions.be/provincie-antwerpen-zoekt-ondernemer-voor-bruisende-zilvermeerhaven/"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "zalige-zwemdagen-in-sint-gillis-waas-sint-gillis-waas-be",
+      "title": "Zalige Zwemdagen in Sint-Gillis-Waas",
+      "place": "Sint-Gillis-Waas",
+      "country": "BE",
+      "status": "pilot",
+      "urls": [
+        "https://www.sint-gillis-waas.be/nieuws/zalige-zwemdagen-in-sint-gillis-waas"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "zwemzones-klaar-in-gent-maar-waterkwaliteit-voorlopig-niet-goed-genoeg-gent-be",
+      "title": "Zwemzones klaar in Gent, maar waterkwaliteit voorlopig niet goed genoeg",
+      "place": "Gent",
+      "country": "BE",
+      "status": "definitief",
+      "urls": [
+        "https://stad.gent/nl/cultuur-vrije-tijd/nieuws-evenementen/zwemzones-klaar-maar-waterkwaliteit-voorlopig-nog-niet-goed-genoeg"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "ouverture-de-sites-de-baignade-dans-le-val-de-marne-val-de-marne-fr",
+      "title": "Ouverture de sites de baignade dans le Val-de-Marne",
+      "place": "Val-de-Marne",
+      "country": "FR",
+      "status": "aangekondigd",
+      "urls": [
+        "https://www.vnf.fr/vnf/actualites/ouverture-de-sites-de-baignade-dans-le-val-de-marne-pendant-lete-2026-quelles-conditions-de-navigation/"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "barikenn-saona-sauna-nordique-mobile-a-penhors-penhors-pouldreuzic-fr",
+      "title": "Barikenn Saona : sauna nordique mobile à Penhors",
+      "place": "Penhors, Pouldreuzic",
+      "country": "FR",
+      "status": "aangekondigd",
+      "urls": [
+        "https://www.destinationpaysbigouden.com/fiche/barikenn-saona-pouldreuzic/"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "baignade-autorisee-a-paris-sites-de-bercy-bras-marie-et-grenelle-paris-fr",
+      "title": "Baignade autorisée à Paris : sites de Bercy, Bras Marie et Grenelle",
+      "place": "Paris",
+      "country": "FR",
+      "status": "aangekondigd",
+      "urls": [
+        "https://www.vnf.fr/vnf/articles/ouverture-de-sites-de-baignade-a-paris-conditions-de-navigation-a-lete-2026/"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "new-sauna-hub-and-bar-in-wadhurst-offers-pre-launch-tickets-wadhurst-uk",
+      "title": "New sauna hub and bar in Wadhurst offers pre-launch tickets",
+      "place": "Wadhurst",
+      "country": "UK",
+      "status": "aangekondigd",
+      "urls": [
+        "https://www.crowdfunder.co.uk/p/qr/wWq5QjbW"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "swimming-opening-times-city-of-london-londen-uk",
+      "title": "Swimming Opening Times - City of London",
+      "place": "Londen",
+      "country": "UK",
+      "status": "definitief",
+      "urls": [
+        "https://www.cityoflondon.gov.uk/things-to-do/green-spaces/hampstead-heath/swimming-hampstead-heath/swimming-opening-times"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "jesus-green-lido-cambridge-outdoor-pool-with-sauna-cambridge-uk",
+      "title": "Jesus Green Lido | Cambridge Outdoor Pool with Sauna",
+      "place": "Cambridge",
+      "country": "UK",
+      "status": "geopend",
+      "urls": [
+        "https://www.better.org.uk/leisure-centre/cambridge/jesus-green-lido"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    }
+  ]
+}
