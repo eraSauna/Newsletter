@@ -1,6 +1,6 @@
 {
   "month": "2026-08",
-  "total_usd": 0.070561,
+  "total_usd": 0.1306911,
   "calls": [
     {
       "label": "collect:Duitsland",
@@ -49,6 +49,54 @@
       "output_tokens": 1766,
       "web_searches": 0,
       "usd": 0.061
+    },
+    {
+      "label": "collect:Duitsland",
+      "model": "gemini-3.1-flash-lite",
+      "input_tokens": 281,
+      "output_tokens": 400,
+      "web_searches": 0,
+      "usd": 0.0003
+    },
+    {
+      "label": "filter",
+      "model": "gemini-3.1-flash-lite",
+      "input_tokens": 464,
+      "output_tokens": 163,
+      "web_searches": 0,
+      "usd": 0.0002
+    },
+    {
+      "label": "read",
+      "model": "gemini-3.6-flash",
+      "input_tokens": 357,
+      "output_tokens": 177,
+      "web_searches": 0,
+      "usd": 0.0019
+    },
+    {
+      "label": "audit",
+      "model": "gemini-3.6-flash",
+      "input_tokens": 221,
+      "output_tokens": 77,
+      "web_searches": 0,
+      "usd": 0.0009
+    },
+    {
+      "label": "audit",
+      "model": "gemini-3.6-flash",
+      "input_tokens": 1036,
+      "output_tokens": 78,
+      "web_searches": 0,
+      "usd": 0.0021
+    },
+    {
+      "label": "editorial",
+      "model": "claude-opus-4-8",
+      "input_tokens": 3370,
+      "output_tokens": 1514,
+      "web_searches": 0,
+      "usd": 0.0547
     }
   ]
 }

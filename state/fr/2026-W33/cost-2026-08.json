@@ -1,6 +1,6 @@
 {
   "month": "2026-08",
-  "total_usd": 0.12933563,
+  "total_usd": 0.17147162999999999,
   "calls": [
     {
       "label": "collect:Frankrijk",
@@ -65,6 +65,54 @@
       "output_tokens": 3753,
       "web_searches": 0,
       "usd": 0.1161
+    },
+    {
+      "label": "collect:Frankrijk",
+      "model": "gemini-3.1-flash-lite",
+      "input_tokens": 279,
+      "output_tokens": 1061,
+      "web_searches": 0,
+      "usd": 0.0008
+    },
+    {
+      "label": "filter",
+      "model": "gemini-3.1-flash-lite",
+      "input_tokens": 471,
+      "output_tokens": 117,
+      "web_searches": 0,
+      "usd": 0.0001
+    },
+    {
+      "label": "read",
+      "model": "gemini-3.6-flash",
+      "input_tokens": 1726,
+      "output_tokens": 129,
+      "web_searches": 0,
+      "usd": 0.0036
+    },
+    {
+      "label": "read",
+      "model": "gemini-3.6-flash",
+      "input_tokens": 1854,
+      "output_tokens": 227,
+      "web_searches": 0,
+      "usd": 0.0045
+    },
+    {
+      "label": "read",
+      "model": "gemini-3.6-flash",
+      "input_tokens": 1995,
+      "output_tokens": 159,
+      "web_searches": 0,
+      "usd": 0.0042
+    },
+    {
+      "label": "editorial",
+      "model": "claude-opus-4-8",
+      "input_tokens": 2986,
+      "output_tokens": 560,
+      "web_searches": 0,
+      "usd": 0.0289
     }
   ]
 }

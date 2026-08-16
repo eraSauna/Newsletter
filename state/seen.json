@@ -215,6 +215,66 @@
       ],
       "firstSeen": "2026-W33",
       "lastSeen": "2026-W33"
+    },
+    {
+      "key": "ondernemer-gezocht-voor-de-weide-in-bleiswijkse-zoom",
+      "title": "Ondernemer gezocht voor de Weide in Bleiswijkse Zoom",
+      "place": "",
+      "country": "",
+      "status": "tender",
+      "urls": [
+        "https://www.staatsbosbeheer.nl/over-staatsbosbeheer/werk-in-uitvoering/aanbestedingen/ondernemer-gezocht-voor-de-weide-in-bleiswijkse-zoom"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "zwemmen-aan-het-sasplein-brugge-be",
+      "title": "Zwemmen aan het Sasplein",
+      "place": "Brugge",
+      "country": "BE",
+      "status": "aangekondigd",
+      "urls": [
+        "https://www.visitbruges.be/zwemmen-aan-het-sasplein"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "the-uk-s-first-sauna-arts-center-combines-sauna-with-theatre-edinburgh-uk",
+      "title": "The UK's first sauna arts center combines sauna with theatre",
+      "place": "Edinburgh",
+      "country": "UK",
+      "status": "geopend",
+      "urls": [
+        "https://www.myanmaritv.com/news/uks-first-sauna-arts-center-combines-sauna-theatre"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "gemeente-rotterdam-begint-marktconsultatie-voor-drijvend-park-in-rijnhaven-rotte",
+      "title": "Gemeente Rotterdam begint marktconsultatie voor drijvend park in Rijnhaven",
+      "place": "Rotterdam",
+      "country": "NL",
+      "status": "tender",
+      "urls": [
+        "https://vastgoedjournaal.nl/news/64795/gemeente-rotterdam-begint-marktconsultatie-voor-drijvend-park-in-rijnhaven"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "nouvelle-zone-de-baignade-dans-la-seine-paris-paris-fr",
+      "title": "Nouvelle zone de baignade dans la Seine (Paris)",
+      "place": "Paris",
+      "country": "FR",
+      "status": "aangekondigd",
+      "urls": [
+        "https://www.sortiraparis.com/"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
     }
   ]
 }

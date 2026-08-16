@@ -1,1 +1,16 @@
-{"developments": []}
+{
+  "developments": [
+    {
+      "key": "neues-volksbad-vor-der-volksbuhne-berlin-berlin-de",
+      "title": "Neues Volksbad vor der Volksbühne Berlin",
+      "place": "Berlin",
+      "country": "DE",
+      "status": "aangekondigd",
+      "urls": [
+        "https://www.visitberlin.de/de/blog/neueroffnungen-berlin-august-2026"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    }
+  ]
+}

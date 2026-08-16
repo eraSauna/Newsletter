@@ -1,49 +1,43 @@
 # eräSauna Market & Location Intelligence
 
-**Woche 33 | Zeitraum 02.08.2026–16.08.2026 | Markt: Deutschland | Veröffentlicht am 16.08.2026**
+**Woche 33 · Zeitraum 02.08.2026–16.08.2026 · Markt: Deutschland · Veröffentlicht am 16.08.2026**
+
+Diese Ausgabe enthält nur belastbare Funde. Sektionen ohne verwertbare Entwicklung wurden weggelassen.
 
 ---
 
 ## 1. Die wichtigsten Signale dieser Ausgabe
 
-- **Neuer Stadthafen Leipzig eröffnet.** Eine fertiggestellte Wasserfront mit Wassersport und Gastronomie (DOCK 20) schafft eine sofort ansprechbare Drop-in-Standortoption in einer deutschen Großstadt. Impact: konkrete Partnergespräche innerhalb der nächsten Monate möglich.
-
-*Für diese Ausgabe liegt nur ein geprüftes Signal vor. Übrige Kategorien enthielten keine belastbaren Findings.*
+- **Temporäres Freiluftbad vor der Volksbühne Berlin.** Anfang August 2026 öffnet das kostenlose 25-Meter-Freiluftbecken an zentraler Berliner Lage. Warum: temporäres Outdoor-Schwimmangebot mit hohem Publikumsaufkommen. Impact: potenzieller Drop-in-Standort bei Freiluftwasser, aber temporärer Charakter begrenzt Planungshorizont. ([visitberlin.de](https://www.visitberlin.de/de/blog/neueroffnungen-berlin-august-2026))
 
 ---
 
-## 2. Neue Standortchancen
+## 3. Zwemwater, waterrecreatie en lokale regelgeving
 
-**Stadthafen Leipzig — Leipzig, Deutschland**
+**Berlin — temporäres Freiluftbad „Volksbad" vor der Volksbühne**
 
-- **Typ:** Stadthafen / Wassersportstandort
-- **Status:** Eröffnet (definitiv, 06.06.2026)
-- **Kurzfassung:** Der erneuerte Stadthafen Leipzig ist offiziell fertig und verfügt über eine Hafenpromenade, Wassersporteinrichtungen und Gastronomie (DOCK 20). Die Kombination aus Wasser, aktivem Freizeitpublikum und Horeca macht den Standort zu einer geeigneten Wasserfront für eine mobile Outdoor-Drop-in-Sauna in einer deutschen Stadt.
-- **Warum relevant:** Neue Freizeit-Hotspot am Wasser mit direktem Zugang zu Wassersport und Gastronomie, also passendem Publikum für eine Drop-in-Sauna.
-- **Wichtigste Chance:** Standplatz bei den Wassersporteinrichtungen mit Anbindung an bestehende Horeca-Frequenz.
-- **Wichtigstes Risiko:** Genehmigungs- und Standplatzbedingungen am neuen Hafen sind noch nicht geprüft; städtische Nutzungsauflagen können den Zeitplan beeinflussen.
-- **Empfohlene Aktion:** Kontakt zum Hafenbetreiber und zu DOCK 20 aufnehmen, um Standplatz- und Kooperationsmöglichkeiten zu sondieren.
-- **Priorität:** B (Score 75)
-- **Quelle:** [stadthafen-leipzig.de](https://www.stadthafen-leipzig.de/)
+Wat verandert: Anfang August 2026 eröffnet in Berlin das „Volksbad", ein temporäres, kostenloses 25-Meter-Schwimmbecken unter freiem Himmel direkt vor der Volksbühne. Das Angebot bringt Freiluft-Schwimmpublikum an eine hochfrequentierte, zentrale Innenstadtlage.
+
+Status: aangekondigd (nicht definitief bestätigter Betriebszeitraum).
+
+Effect: hohe Passantenfrequenz und Freiluftwasser-Kontext schaffen ein passendes Umfeld für ein Drop-in-Saunakonzept.
+
+Kans of beperking: Kans op zichtbaarheid bij een centraal outdoor-zwempubliek; beperking is het tijdelijke karakter, waardoor een langlopende exploitatie onzeker is.
+
+Aanbevolen actie: Kontakt zu Betreiber/Veranstalter aufnehmen und Machbarkeit einer temporären mobilen Unit als Test prüfen.
+
+Bron: [visitberlin.de, 17.07.2026](https://www.visitberlin.de/de/blog/neueroffnungen-berlin-august-2026)
 
 ---
 
-## 12. Konkrete Aktionen für eräSauna
+## 12. Concrete acties voor eräSauna
 
-1. **Betreiber Stadthafen Leipzig kontaktieren.**
-   - *Warum jetzt:* Hafen ist eröffnet, Frequenz baut sich in der laufenden Saison auf.
-   - *Erwartetes Ergebnis:* Klarheit über Standplatz- und Kooperationsoptionen, mögliche Pilotvereinbarung.
-   - *Priorität:* Hoch
-   - *Deadline:* 30.09.2026
+1. **Actie:** Betreiber des Berliner „Volksbad" kontaktieren und Optionen für eine temporäre Drop-in-Unit sondieren.
+   **Waarom nu:** Bad ist Anfang August 2026 aktiv; das Zeitfenster ist begrenzt.
+   **Verwacht resultaat:** Klarheit über Standort-, Betriebs- und Genehmigungsbedingungen an einer zentralen Berliner Freiluftwasserlage.
+   **Prioriteit:** B.
+   **Deadline:** kurzfristig innerhalb der laufenden Betriebssaison.
 
-2. **Genehmigungs- und Nutzungsbedingungen am Stadthafen prüfen.**
-   - *Warum jetzt:* Machbarkeit und Zeitplan hängen von städtischen Auflagen ab.
-   - *Erwartetes Ergebnis:* Bewertung, ob Standort in den nächsten zwölf Monaten realisierbar ist.
-   - *Priorität:* Mittel
-   - *Deadline:* 15.10.2026
+---
 
-3. **Kontakt zu DOCK 20 (Gastronomie) als lokalem Partner aufbauen.**
-   - *Warum jetzt:* Horeca-Partnerschaft erhöht Frequenz und vereinfacht Betrieb.
-   - *Erwartetes Ergebnis:* Gesprächsbasis für gemeinsame Nutzung und Cross-Selling.
-   - *Priorität:* Mittel
-   - *Deadline:* 31.10.2026
+*Hinweis: Für diese Ausgabe lagen nur begrenzte verifizierte Funde für den deutschen Markt vor. Die Sektionen 2, 4, 5, 8, 9, 10 und 11 entfallen mangels belastbarer Entwicklungen.*
