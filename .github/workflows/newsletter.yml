@@ -1,14 +1,13 @@
 name: Newsletter
 
-# Draait elke maandag; run-edition.mjs bouwt alleen in EVEN ISO-weken
-# (tweewekelijks), tenzij force=true. Drie edities: hoofd (NL/BE/FR/DE + UK/DK),
-# Frankrijk (Frans) en Duitsland (Duits). De hoofdmail draait EERST en zonder
-# continue-on-error; fr/de draaien erna op continue-on-error, zodat een
-# partner-editie de hoofdmail nooit kan breken. Verzenden alleen bij send=true.
+# Elke maandag; run-edition.mjs bouwt alleen in EVEN ISO-weken (tenzij force=true).
+# Drie edities: hoofd (NL/BE/FR/DE + UK/DK), Frankrijk (FR), Duitsland (DE).
+# Hoofdmail draait EERST en zonder continue-on-error; fr/de erna op continue-on-error.
+# test_to: overschrijft alle ontvangers (voor veilig testen naar je eigen inbox).
 
 on:
   schedule:
-    - cron: "0 6 * * 1" # elke maandag 06:00 UTC; code-gate = even weken
+    - cron: "0 6 * * 1"
   workflow_dispatch:
     inputs:
       send:
@@ -16,9 +15,13 @@ on:
         type: boolean
         default: false
       force:
-        description: "Forceer bouwen ook in een niet-editie (oneven) week?"
+        description: "Forceer bouwen ook in oneven week?"
         type: boolean
         default: false
+      test_to:
+        description: "Test: stuur ALLE edities naar dit adres i.p.v. de echte ontvangers (leeg = normaal)"
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -48,37 +51,46 @@ jobs:
       - name: Hoofdmail (NL/BE/FR/DE + trendwatch)
         env:
           PROFILE: main
-          NEWSLETTER_TO: info@erasauna.nl
+          NEWSLETTER_TO_DEFAULT: info@erasauna.nl
         run: |
           OUT=$(node run-edition.mjs); echo "$OUT"
           DIR=$(echo "$OUT" | sed -n 's/^EDITIONDIR=//p'); SUBJ=$(echo "$OUT" | sed -n 's/^SUBJECT=//p')
           [ -z "$DIR" ] && { echo "geen editie deze week"; exit 0; }
           python3 md-to-email.py "$DIR/newsletter.md" > "$DIR/newsletter.html"
-          if [ "${{ inputs.send }}" = "true" ]; then node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"; fi
+          if [ "${{ inputs.send }}" = "true" ]; then
+            TO="${{ inputs.test_to }}"; [ -z "$TO" ] && TO="$NEWSLETTER_TO_DEFAULT"
+            NEWSLETTER_TO="$TO" node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"
+          fi
 
       - name: Frankrijk-editie (Frans)
         continue-on-error: true
         env:
           PROFILE: fr
-          NEWSLETTER_TO: ${{ vars.NEWSLETTER_TO_FR || 'larsdehaan09@gmail.com' }},info@erasauna.nl
+          NEWSLETTER_TO_DEFAULT: ${{ vars.NEWSLETTER_TO_FR || 'larsdehaan09@gmail.com' }},info@erasauna.nl
         run: |
           OUT=$(node run-edition.mjs); echo "$OUT"
           DIR=$(echo "$OUT" | sed -n 's/^EDITIONDIR=//p'); SUBJ=$(echo "$OUT" | sed -n 's/^SUBJECT=//p')
           [ -z "$DIR" ] && { echo "geen editie deze week"; exit 0; }
           python3 md-to-email.py "$DIR/newsletter.md" > "$DIR/newsletter.html"
-          if [ "${{ inputs.send }}" = "true" ]; then node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"; fi
+          if [ "${{ inputs.send }}" = "true" ]; then
+            TO="${{ inputs.test_to }}"; [ -z "$TO" ] && TO="$NEWSLETTER_TO_DEFAULT"
+            NEWSLETTER_TO="$TO" node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"
+          fi
 
       - name: Duitsland-editie (Duits)
         continue-on-error: true
         env:
           PROFILE: de
-          NEWSLETTER_TO: ${{ vars.NEWSLETTER_TO_DE }},info@erasauna.nl
+          NEWSLETTER_TO_DEFAULT: ${{ vars.NEWSLETTER_TO_DE }},info@erasauna.nl
         run: |
           OUT=$(node run-edition.mjs); echo "$OUT"
           DIR=$(echo "$OUT" | sed -n 's/^EDITIONDIR=//p'); SUBJ=$(echo "$OUT" | sed -n 's/^SUBJECT=//p')
           [ -z "$DIR" ] && { echo "geen editie deze week"; exit 0; }
           python3 md-to-email.py "$DIR/newsletter.md" > "$DIR/newsletter.html"
-          if [ "${{ inputs.send }}" = "true" ]; then node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"; fi
+          if [ "${{ inputs.send }}" = "true" ]; then
+            TO="${{ inputs.test_to }}"; [ -z "$TO" ] && TO="$NEWSLETTER_TO_DEFAULT"
+            NEWSLETTER_TO="$TO" node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"
+          fi
 
       - name: Archiveer alle edities
         run: |
