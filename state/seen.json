@@ -119,6 +119,102 @@
       ],
       "firstSeen": "2026-W33",
       "lastSeen": "2026-W33"
+    },
+    {
+      "key": "provast-ontwikkelt-bouwblok-1-in-de-rijnhaven-in-rotterdam-rotterdam-nl",
+      "title": "Provast ontwikkelt bouwblok 1 in de Rijnhaven in Rotterdam",
+      "place": "Rotterdam",
+      "country": "NL",
+      "status": "aangekondigd",
+      "urls": [
+        "https://dagblad010.nl/Rotterdam%20&%20Regio/provast-ontwikkelt-bouwblok-1-in-de-rijnhaven-in-rotterdam"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "zwemsteiger-op-borneo-eiland-amsterdam-onder-druk-door-juridische-strijd-amsterd",
+      "title": "Zwemsteiger op Borneo-eiland Amsterdam onder druk door juridische strijd",
+      "place": "Amsterdam",
+      "country": "NL",
+      "status": "definitief",
+      "urls": [
+        "https://oost-online.nl/"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "vlaanderen-erkent-10-nieuwe-openwaterzwemzones-waaronder-ook-vossemeren",
+      "title": "Vlaanderen erkent 10 nieuwe openwaterzwemzones, waaronder ook Vossemeren",
+      "place": "",
+      "country": "",
+      "status": "definitief",
+      "urls": [
+        "https://www.lommelsegazet.be/nieuws/vlaanderen-erkent-10-nieuwe-openwaterzwemzones-waaronder-ook-vossemeren"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "nieuwe-zwemzone-in-diksmuide-tijdelijk-gesloten-door-groei-van-blauwalgen-diksmu",
+      "title": "Nieuwe zwemzone in Diksmuide tijdelijk gesloten door groei van blauwalgen",
+      "place": "Diksmuide",
+      "country": "BE",
+      "status": "geopend",
+      "urls": [
+        "https://www.kw.be/nieuws/diksmuide/nieuwe-zwemzone-in-diksmuide-tijdelijk-gesloten-door-groei-van-blauwalgen/"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "la-guinguette-de-tours-accueil-tours-fr",
+      "title": "La Guinguette de Tours - Accueil",
+      "place": "Tours",
+      "country": "FR",
+      "status": "definitief",
+      "urls": [
+        "https://www.tours.fr/actualites/350/548-la-guinguette-de-tours.htm"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "reouverture-de-la-baignade-et-des-activites-nautiques-a-la-base-de-loisirs-les-3",
+      "title": "Réouverture de la baignade et des activités nautiques à la base de loisirs « Les 3 lacs »",
+      "place": "Base de loisirs Les 3 lacs",
+      "country": "FR",
+      "status": "geopend",
+      "urls": [
+        "https://www.serreponcon-val-davance.fr/actualites/reouverture-de-la-baignade-et-des-activites-nautiques-a-la-base-de-loisirs-les-3-lacs/"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "campingpark-huttensee-neues-fitnessstudio-und-sauna-garten-direkt-am-see-lunebur",
+      "title": "Campingpark Hüttensee: Neues Fitnessstudio und Sauna-Garten direkt am See",
+      "place": "Lüneburger Heide",
+      "country": "DE",
+      "status": "geopend",
+      "urls": [
+        "https://www.huettensee.de/"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    },
+    {
+      "key": "barikenn-saona-votre-sauna-mobile-a-penhors-penhors-pouldreuzic-fr",
+      "title": "Barikenn Saona : votre sauna mobile à Penhors",
+      "place": "Penhors, Pouldreuzic",
+      "country": "FR",
+      "status": "geopend",
+      "urls": [
+        "https://www.destination-paysbigouden.com/a-voir-a-faire/bien-etre/barikenn-saona-pouldreuzic-1579737"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
     }
   ]
 }
