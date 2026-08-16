@@ -1,19 +1,19 @@
 [
   {
     "relevant": true,
-    "block": "swimming",
-    "title": "Neues Volksbad vor der Volksbühne Berlin",
-    "summary": "In Berlin eröffnet Anfang August 2026 das Volksbad als temporäres, kostenloses 25-Meter-Schwimmbecken unter freiem Himmel direkt vor der Volksbühne.",
-    "score": 65,
-    "action": "Mogelijkheden onderzoeken voor samenwerking of plaatsing van een mobiele sauna bij dit tijdelijke buitenbad.",
+    "block": "locations",
+    "title": "Stadthafen Recklinghausen: Gastronomie und Beachbar",
+    "summary": "Stadthafen Recklinghausen is een hotspot aan het water in het Ruhrgebied met beachbar, BBQ-lounges en SUP-verhuur, uitstekend geschikt als potentiële outdoor locatie voor eräSauna.",
+    "score": 75,
+    "action": "Contact opnemen met Stadthafen Recklinghausen voor het verkennen van een winterse pop-up saunalocatie aan het water.",
     "country": "DE",
-    "date": "2026-07-17",
-    "place": "Berlin",
+    "date": "2026-08-16",
+    "place": "Recklinghausen",
     "priority": "B",
-    "status": "aangekondigd",
-    "type": "pop-up zwembad",
-    "why": "Tijdelijk outdoor zweminitiatief op een centrale locatie in Berlijn biedt kansen voor saunaconcepten bij buitenwater.",
-    "source": "https://www.visitberlin.de/de/blog/neueroffnungen-berlin-august-2026",
+    "status": "voorstel",
+    "type": "Beachbar / Waterfront eventlocatie",
+    "why": "Locatie heeft direct watercontact, buitenruimte, horecafaciliteiten en ervaring met recreatieve buitenactiviteiten in een grote regio (Ruhrgebied).",
+    "source": "https://www.stadthafen.com/",
     "update": false
   }
 ]

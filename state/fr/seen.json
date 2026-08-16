@@ -1,1 +1,16 @@
-{"developments": []}
+{
+  "developments": [
+    {
+      "key": "wild-sauna-by-popaian-sauna-mobile-au-feu-de-bois-chamonix-fr",
+      "title": "Wild Sauna by Popaian : Sauna mobile au feu de bois",
+      "place": "Chamonix",
+      "country": "FR",
+      "status": "geopend",
+      "urls": [
+        "https://wildsauna.fr/"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    }
+  ]
+}

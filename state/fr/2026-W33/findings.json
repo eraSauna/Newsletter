@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "relevant": true,
+    "block": "competitors",
+    "title": "Wild Sauna by Popaian : Sauna mobile au feu de bois",
+    "summary": "Wild Sauna biedt een mobiele houtgestookte saunadienst met koud-warmtherapie in Frankrijk (Chamonix / Le Pouldu en Guidel).",
+    "score": 75,
+    "action": "Monitoren als concurrent op de Franse markt voor mobiele outdoor sauna's.",
+    "country": "FR",
+    "date": "2026-08-04",
+    "place": "Chamonix",
+    "priority": "B",
+    "status": "geopend",
+    "type": "mobiele sauna",
+    "why": "Directe concurrent in Frankrijk die een mobiele houtgestookte outdoor sauna en koudwatertherapie aanbiedt.",
+    "source": "https://wildsauna.fr/",
+    "update": false
+  }
+]

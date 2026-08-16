@@ -1,1 +1,16 @@
-{"developments": []}
+{
+  "developments": [
+    {
+      "key": "stadthafen-recklinghausen-gastronomie-und-beachbar-recklinghausen-de",
+      "title": "Stadthafen Recklinghausen: Gastronomie und Beachbar",
+      "place": "Recklinghausen",
+      "country": "DE",
+      "status": "voorstel",
+      "urls": [
+        "https://www.stadthafen.com/"
+      ],
+      "firstSeen": "2026-W33",
+      "lastSeen": "2026-W33"
+    }
+  ]
+}
