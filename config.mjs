@@ -59,19 +59,19 @@ export const PROFILES = {
   fr: {
     markets: ["Frankrijk"],
     trendwatch: false,
-    language: "Frans",
+    language: "Nederlands",
     memoryDir: "state/fr",
     subdir: "fr",
     marketsLabel: "France",
-    subject: "eräSauna France — veille marché & implantations",
+    subject: "eräSauna Frankrijk — markt- en locatie-intelligence",
   },
   de: {
     markets: ["Duitsland"],
     trendwatch: false,
-    language: "Duits",
+    language: "Nederlands",
     memoryDir: "state/de",
     subdir: "de",
     marketsLabel: "Deutschland",
-    subject: "eräSauna Deutschland — Markt- und Standort-Intelligenz",
+    subject: "eräSauna Duitsland — markt- en locatie-intelligence",
   },
 };
