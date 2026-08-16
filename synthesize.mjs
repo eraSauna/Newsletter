@@ -8,7 +8,7 @@ import { readFile } from "node:fs/promises";
 /**
  * @returns {Promise<{markdown: string}>}
  */
-export async function synthesize({ model, meta, findings, promptPath, ledger }) {
+export async function synthesize({ model, meta, findings, promptPath, ledger, language = "Nederlands" }) {
   const client = new Anthropic(); // ANTHROPIC_API_KEY uit env
   const editorialPrompt = await readFile(promptPath, "utf8");
 
@@ -19,7 +19,8 @@ export async function synthesize({ model, meta, findings, promptPath, ledger }) 
 - Weeknummer: ${meta.week}
 - Periode: ${meta.periodStart} tot ${meta.periodEnd}
 - Publicatiedatum: ${meta.publishDate}
-- Markten: Nederland, België, Frankrijk, Duitsland (primair); Groot-Brittannië, Denemarken (trendwatch)
+- Markten: ${meta.marketsLabel}
+- Taal: schrijf de VOLLEDIGE nieuwsbrief in het ${language}. De sectiestructuur en -volgorde blijven gelijk.
 
 Neem in deze editie UITSLUITEND deze secties op (in deze volgorde):
 ${activeList}

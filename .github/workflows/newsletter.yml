@@ -1,17 +1,18 @@
 name: Newsletter
 
-# Draait elke maandag, maar run-edition.mjs bouwt alleen in EVEN ISO-weken
-# (tweewekelijks); oneven weken stopt het script direct. Verzenden is bewust
-# gescheiden: standaard alleen bouwen + archiveren; sturen gebeurt via een
-# handmatige run (workflow_dispatch met send=true).
+# Draait elke maandag; run-edition.mjs bouwt alleen in EVEN ISO-weken
+# (tweewekelijks), tenzij force=true. Drie edities: hoofd (NL/BE/FR/DE + UK/DK),
+# Frankrijk (Frans) en Duitsland (Duits). De hoofdmail draait EERST en zonder
+# continue-on-error; fr/de draaien erna op continue-on-error, zodat een
+# partner-editie de hoofdmail nooit kan breken. Verzenden alleen bij send=true.
 
 on:
   schedule:
-    - cron: "0 6 * * 1" # elke maandag 06:00 UTC; code gate = even weken (2-wekelijks)
+    - cron: "0 6 * * 1" # elke maandag 06:00 UTC; code-gate = even weken
   workflow_dispatch:
     inputs:
       send:
-        description: "Ook verzenden naar info@erasauna.nl?"
+        description: "Ook verzenden?"
         type: boolean
         default: false
       force:
@@ -20,7 +21,7 @@ on:
         default: false
 
 permissions:
-  contents: write # om de gebouwde editie terug te committen naar state/
+  contents: write
 
 jobs:
   build:
@@ -28,6 +29,8 @@ jobs:
     env:
       GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      NEWSLETTER_FROM: ${{ vars.NEWSLETTER_FROM || 'eräSauna Intelligence <intel@erasauna.nl>' }}
       FILTER_MODEL: ${{ vars.FILTER_MODEL || 'gemini-3.1-flash-lite' }}
       READER_MODEL: ${{ vars.READER_MODEL || 'gemini-3.6-flash' }}
       AUDIT_MODEL: ${{ vars.AUDIT_MODEL || 'gemini-3.6-flash' }}
@@ -37,41 +40,56 @@ jobs:
       FORCE_EDITION: ${{ inputs.force }}
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-
       - run: npm install
 
-      - name: Bouw editie (research + eindredactie)
-        run: node run-edition.mjs
+      - name: Hoofdmail (NL/BE/FR/DE + trendwatch)
+        env:
+          PROFILE: main
+          NEWSLETTER_TO: info@erasauna.nl
+        run: |
+          OUT=$(node run-edition.mjs); echo "$OUT"
+          DIR=$(echo "$OUT" | sed -n 's/^EDITIONDIR=//p'); SUBJ=$(echo "$OUT" | sed -n 's/^SUBJECT=//p')
+          [ -z "$DIR" ] && { echo "geen editie deze week"; exit 0; }
+          python3 md-to-email.py "$DIR/newsletter.md" > "$DIR/newsletter.html"
+          if [ "${{ inputs.send }}" = "true" ]; then node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"; fi
 
-      - name: Bepaal editie-map
-        id: edition
-        run: echo "dir=$(ls -d state/*/ | sort | tail -1)" >> "$GITHUB_OUTPUT"
+      - name: Frankrijk-editie (Frans)
+        continue-on-error: true
+        env:
+          PROFILE: fr
+          NEWSLETTER_TO: ${{ vars.NEWSLETTER_TO_FR || 'larsdehaan09@gmail.com' }},info@erasauna.nl
+        run: |
+          OUT=$(node run-edition.mjs); echo "$OUT"
+          DIR=$(echo "$OUT" | sed -n 's/^EDITIONDIR=//p'); SUBJ=$(echo "$OUT" | sed -n 's/^SUBJECT=//p')
+          [ -z "$DIR" ] && { echo "geen editie deze week"; exit 0; }
+          python3 md-to-email.py "$DIR/newsletter.md" > "$DIR/newsletter.html"
+          if [ "${{ inputs.send }}" = "true" ]; then node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"; fi
 
-      - name: Render naar e-mail-HTML
-        run: python3 md-to-email.py "${{ steps.edition.outputs.dir }}newsletter.md" > "${{ steps.edition.outputs.dir }}newsletter.html"
+      - name: Duitsland-editie (Duits)
+        continue-on-error: true
+        env:
+          PROFILE: de
+          NEWSLETTER_TO: ${{ vars.NEWSLETTER_TO_DE }},info@erasauna.nl
+        run: |
+          OUT=$(node run-edition.mjs); echo "$OUT"
+          DIR=$(echo "$OUT" | sed -n 's/^EDITIONDIR=//p'); SUBJ=$(echo "$OUT" | sed -n 's/^SUBJECT=//p')
+          [ -z "$DIR" ] && { echo "geen editie deze week"; exit 0; }
+          python3 md-to-email.py "$DIR/newsletter.md" > "$DIR/newsletter.html"
+          if [ "${{ inputs.send }}" = "true" ]; then node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"; fi
 
-      - name: Archiveer editie in de repo
+      - name: Archiveer alle edities
         run: |
           git config user.name "eräSauna"
           git config user.email "info@erasauna.nl"
           git add state/
-          git commit -m "editie: ${{ steps.edition.outputs.dir }}" || echo "geen wijzigingen"
+          git commit -m "edities $(date -u +%F)" || echo "geen wijzigingen"
           git push || echo "push overgeslagen"
 
-      - name: Upload editie als artifact
+      - name: Upload edities als artifact
         uses: actions/upload-artifact@v4
         with:
-          name: newsletter
-          path: ${{ steps.edition.outputs.dir }}
-
-      - name: Verzenden (alleen bij handmatige run met send=true)
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.send }}
-        env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          NEWSLETTER_FROM: ${{ vars.NEWSLETTER_FROM || 'eräSauna Intelligence <intel@erasauna.nl>' }}
-          NEWSLETTER_TO: ${{ vars.NEWSLETTER_TO || 'info@erasauna.nl' }}
-        run: node send-newsletter.mjs "${{ steps.edition.outputs.dir }}newsletter.html" "eräSauna Market & Location Intelligence"
+          name: newsletters
+          path: state/

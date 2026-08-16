@@ -42,3 +42,36 @@ export const MARKET_QUERIES = {
 };
 
 export const TRENDWATCH_QUERY = "last 2 weeks: UK community sauna OR seaside/beach sauna OR sauna hub OR sauna membership/crowdfunding; Denmark havnebad OR saunaklub OR vinterbadning OR havneudvikling rekreativ. New openings, business/exploitation models, municipal cooperation. Prefer original local sources.";
+
+// Profielen — elk een aparte nieuwsbrief met eigen scope, taal, geheugen en
+// ontvanger. De hoofdmail (main) blijft ongewijzigd: eigen state/seen.json,
+// alle markten. Partner-edities draaien geïsoleerd ernaast.
+export const PROFILES = {
+  main: {
+    markets: MARKETS.primary,
+    trendwatch: true,
+    language: "Nederlands",
+    memoryDir: "state",
+    subdir: "",
+    marketsLabel: "Nederland, België, Frankrijk, Duitsland (primair), Groot-Brittannië en Denemarken (trendwatch)",
+    subject: "eräSauna Market & Location Intelligence",
+  },
+  fr: {
+    markets: ["Frankrijk"],
+    trendwatch: false,
+    language: "Frans",
+    memoryDir: "state/fr",
+    subdir: "fr",
+    marketsLabel: "France",
+    subject: "eräSauna France — veille marché & implantations",
+  },
+  de: {
+    markets: ["Duitsland"],
+    trendwatch: false,
+    language: "Duits",
+    memoryDir: "state/de",
+    subdir: "de",
+    marketsLabel: "Deutschland",
+    subject: "eräSauna Deutschland — Markt- und Standort-Intelligenz",
+  },
+};
