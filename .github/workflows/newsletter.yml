@@ -57,7 +57,7 @@ jobs:
           DIR=$(echo "$OUT" | sed -n 's/^EDITIONDIR=//p'); SUBJ=$(echo "$OUT" | sed -n 's/^SUBJECT=//p')
           [ -z "$DIR" ] && { echo "geen editie deze week"; exit 0; }
           python3 md-to-email.py "$DIR/newsletter.md" > "$DIR/newsletter.html"
-          if [ "${{ inputs.send }}" = "true" ]; then
+          if [ "${{ github.event_name == 'schedule' || inputs.send == 'true' }}" = "true" ]; then
             TO="${{ inputs.test_to }}"; [ -z "$TO" ] && TO="$NEWSLETTER_TO_DEFAULT"
             NEWSLETTER_TO="$TO" node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"
           fi
@@ -72,7 +72,7 @@ jobs:
           DIR=$(echo "$OUT" | sed -n 's/^EDITIONDIR=//p'); SUBJ=$(echo "$OUT" | sed -n 's/^SUBJECT=//p')
           [ -z "$DIR" ] && { echo "geen editie deze week"; exit 0; }
           python3 md-to-email.py "$DIR/newsletter.md" > "$DIR/newsletter.html"
-          if [ "${{ inputs.send }}" = "true" ]; then
+          if [ "${{ (github.event_name == 'schedule' && vars.AUTOSEND_PARTNERS == 'true') || inputs.send == 'true' }}" = "true" ]; then
             TO="${{ inputs.test_to }}"; [ -z "$TO" ] && TO="$NEWSLETTER_TO_DEFAULT"
             NEWSLETTER_TO="$TO" node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"
           fi
@@ -87,7 +87,7 @@ jobs:
           DIR=$(echo "$OUT" | sed -n 's/^EDITIONDIR=//p'); SUBJ=$(echo "$OUT" | sed -n 's/^SUBJECT=//p')
           [ -z "$DIR" ] && { echo "geen editie deze week"; exit 0; }
           python3 md-to-email.py "$DIR/newsletter.md" > "$DIR/newsletter.html"
-          if [ "${{ inputs.send }}" = "true" ]; then
+          if [ "${{ (github.event_name == 'schedule' && vars.AUTOSEND_PARTNERS == 'true') || inputs.send == 'true' }}" = "true" ]; then
             TO="${{ inputs.test_to }}"; [ -z "$TO" ] && TO="$NEWSLETTER_TO_DEFAULT"
             NEWSLETTER_TO="$TO" node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"
           fi
