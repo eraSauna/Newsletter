@@ -1,0 +1,53 @@
+[
+  {
+    "relevant": true,
+    "block": "swimming",
+    "title": "Ouverture de la nouvelle zone de baignade naturelle à Neuilly-sur-Marne",
+    "summary": "Vanaf 4 juli tot 30 augustus 2026 opent 'La Rive de Neuilly', een gecontroleerde en bewaakte natuurlijke zwemzone met drijvende bassins in de Marne bij de jachthaven van Neuilly-sur-Marne, op 25 minuten van Parijs.",
+    "score": 82,
+    "action": "Locatie en beheerder van de jachthaven/zwemzone benaderen voor mogelijkheden rond het plaatsen van een mobiele outdoor sauna.",
+    "country": "FR",
+    "date": "2026-06-29",
+    "place": "Neuilly-sur-Marne",
+    "priority": "B",
+    "status": "aangekondigd",
+    "type": "natuurlijke zwemzone / jachthaven",
+    "why": "Nieuwe buitenzwemlocatie dichtbij Parijs met voorzieningen en drijvende bassins is een ideale plek voor een outdoor sauna concept.",
+    "source": "https://parissecret.com/zone-baignade-marde/",
+    "update": false
+  },
+  {
+    "relevant": true,
+    "block": "competitors",
+    "title": "Barikenn Saona : Sauna nordique mobile à Penhors",
+    "summary": "Barikenn Saona biedt een mobiele Scandinavische saunadienst op het strand van Penhors in Pouldreuzic (Bretagne, Frankrijk), met zowel collectieve als privatiseerbare sessies.",
+    "score": 75,
+    "action": "Monitoren als Franse concurrent en locatie-voorbeeld voor outdoor saunaconcepten aan kustgebieden.",
+    "country": "FR",
+    "date": null,
+    "place": "Pouldreuzic",
+    "priority": "B",
+    "status": "geopend",
+    "type": "mobiele outdoor sauna",
+    "why": "Directe concurrent in Frankrijk die een mobiele outdoor sauna exploitatie uitvoert op een beachlocatie.",
+    "source": "https://www.destination-paysbigouden.com/a-voir-a-faire/activites/barikenn-saona-pouldreuzic-fr-6274171/",
+    "update": false
+  },
+  {
+    "relevant": true,
+    "block": "locations",
+    "title": "Base de loisirs du Lac de La Terrasse - Le Grésivaudan",
+    "summary": "De base de loisirs du Lac de La Terrasse beschikt over een bewaakt strand en recreatieve voorzieningen bij een meer in de regio Le Grésivaudan, een potentiële Franse outdoor saunalocatie bij open zwemwater.",
+    "score": 65,
+    "action": "Locatie en contactmogelijkheden verkennen met de gemeenschap Le Grésivaudan voor plaatsing van een mobiele sauna.",
+    "country": "FR",
+    "date": "2026-06-03",
+    "place": "La Terrasse",
+    "priority": "B",
+    "status": "geopend",
+    "type": "base de loisirs",
+    "why": "Openwater zwemlocatie met strand en recreatievoorzieningen in Frankrijk, geschikt voor outdoor saunaconcepten.",
+    "source": "https://www.le-gresivaudan.fr/45-base-de-loisirs-du-lac-de-la-terrasse.htm",
+    "update": false
+  }
+]

@@ -431,6 +431,78 @@
       ],
       "firstSeen": "2026-W33",
       "lastSeen": "2026-W33"
+    },
+    {
+      "key": "subsidieoproep-natuur-waterbeleving-2026-vlaanderen-be",
+      "title": "Subsidieoproep Natuur- & Waterbeleving 2026",
+      "place": "Vlaanderen",
+      "country": "BE",
+      "status": "aangekondigd",
+      "urls": [
+        "https://toerismevlaanderen.be/subsidies/natuur-en-waterbeleving"
+      ],
+      "firstSeen": "2026-W34",
+      "lastSeen": "2026-W34"
+    },
+    {
+      "key": "zwemmen-in-open-water-zwemplezier-op-unieke-locaties-in-gent-gent-be",
+      "title": "Zwemmen in open water - Zwemplezier op unieke locaties in Gent",
+      "place": "Gent",
+      "country": "BE",
+      "status": "aangekondigd",
+      "urls": [
+        "https://visit.gent.be/nl/agenda/zwemmen-in-open-water-13-tot-30-augustus-2026"
+      ],
+      "firstSeen": "2026-W34",
+      "lastSeen": "2026-W34"
+    },
+    {
+      "key": "havn-zomerbar-langs-het-water-in-gent",
+      "title": "HAVN Zomerbar langs het water in Gent",
+      "place": "",
+      "country": "",
+      "status": "geopend",
+      "urls": [
+        "https://visit.gent.be/nl/zien-doen/havn-zomerbar"
+      ],
+      "firstSeen": "2026-W34",
+      "lastSeen": "2026-W34"
+    },
+    {
+      "key": "zebra-beach-strand-in-het-midden-van-de-stad-gent-gent-be",
+      "title": "Zebra Beach - Strand in het midden van de stad Gent",
+      "place": "Gent",
+      "country": "BE",
+      "status": "aangekondigd",
+      "urls": [
+        "https://visit.gent.be/nl/agenda/zebra-beach-1-juli-tot-31-augustus-2026"
+      ],
+      "firstSeen": "2026-W34",
+      "lastSeen": "2026-W34"
+    },
+    {
+      "key": "gazon-zomerbar-in-de-tuinen-van-de-kristallijn-gent-be",
+      "title": "Gazon - Zomerbar in de tuinen van de Kristallijn",
+      "place": "Gent",
+      "country": "BE",
+      "status": "aangekondigd",
+      "urls": [
+        "https://visit.gent.be/nl/agenda/gazon-30-april-tot-30-augustus-2026"
+      ],
+      "firstSeen": "2026-W34",
+      "lastSeen": "2026-W34"
+    },
+    {
+      "key": "community-sauna-eyes-major-expansion-with-pilot-crowdfunder-bristol-uk",
+      "title": "Community sauna eyes major expansion with pilot crowdfunder",
+      "place": "Bristol",
+      "country": "UK",
+      "status": "pilot",
+      "urls": [
+        "https://www.bristol247.com/business/news-business/community-sauna-eyes-major-expansion-with-pilot-crowdfunder/"
+      ],
+      "firstSeen": "2026-W34",
+      "lastSeen": "2026-W34"
     }
   ]
 }

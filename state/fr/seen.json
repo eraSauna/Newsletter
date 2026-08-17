@@ -11,6 +11,42 @@
       ],
       "firstSeen": "2026-W33",
       "lastSeen": "2026-W33"
+    },
+    {
+      "key": "ouverture-de-la-nouvelle-zone-de-baignade-naturelle-a-neuilly-sur-marne-neuilly-",
+      "title": "Ouverture de la nouvelle zone de baignade naturelle à Neuilly-sur-Marne",
+      "place": "Neuilly-sur-Marne",
+      "country": "FR",
+      "status": "aangekondigd",
+      "urls": [
+        "https://parissecret.com/zone-baignade-marde/"
+      ],
+      "firstSeen": "2026-W34",
+      "lastSeen": "2026-W34"
+    },
+    {
+      "key": "barikenn-saona-sauna-nordique-mobile-a-penhors-pouldreuzic-fr",
+      "title": "Barikenn Saona : Sauna nordique mobile à Penhors",
+      "place": "Pouldreuzic",
+      "country": "FR",
+      "status": "geopend",
+      "urls": [
+        "https://www.destination-paysbigouden.com/a-voir-a-faire/activites/barikenn-saona-pouldreuzic-fr-6274171/"
+      ],
+      "firstSeen": "2026-W34",
+      "lastSeen": "2026-W34"
+    },
+    {
+      "key": "base-de-loisirs-du-lac-de-la-terrasse-le-gresivaudan-la-terrasse-fr",
+      "title": "Base de loisirs du Lac de La Terrasse - Le Grésivaudan",
+      "place": "La Terrasse",
+      "country": "FR",
+      "status": "geopend",
+      "urls": [
+        "https://www.le-gresivaudan.fr/45-base-de-loisirs-du-lac-de-la-terrasse.htm"
+      ],
+      "firstSeen": "2026-W34",
+      "lastSeen": "2026-W34"
     }
   ]
 }
