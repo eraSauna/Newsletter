@@ -40,6 +40,9 @@ jobs:
       EDITORIAL_MODEL: ${{ vars.EDITORIAL_MODEL || 'claude-opus-4-8' }}
       MONTHLY_CAP_USD: ${{ vars.MONTHLY_CAP_USD || '15' }}
       AUDIT_SAMPLE_SIZE: ${{ vars.AUDIT_SAMPLE_SIZE || '20' }}
+      # Backlog-modus: zet Variable BACKLOG_SINCE (bijv. 2026-05-01) om de eerste
+      # edities de achterstand sinds voorjaar 2026 te laten ophalen; leeg = 2 weken.
+      BACKLOG_SINCE: ${{ vars.BACKLOG_SINCE }}
       FORCE_EDITION: ${{ inputs.force }}
     steps:
       - uses: actions/checkout@v4
