@@ -60,7 +60,7 @@ function layout(inner) {
           <tr>
             <td style="padding:0 32px 28px;">
               <div style="border-top:1px solid #ececE8;padding-top:16px;font-size:11px;color:#a5a59b;line-height:1.6;">
-                Interne market-intelligence voor eräSauna. Wekelijks, op maandag.
+                Interne market-intelligence voor eräSauna. Tweewekelijks, op maandag.
               </div>
             </td>
           </tr>
