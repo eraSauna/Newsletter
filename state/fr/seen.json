@@ -47,6 +47,66 @@
       ],
       "firstSeen": "2026-W34",
       "lastSeen": "2026-W34"
+    },
+    {
+      "key": "lancement-du-sauna-flottant-a-brest-moulin-blanc-brest-fr",
+      "title": "Lancement du sauna flottant à Brest (Moulin-Blanc)",
+      "place": "Brest",
+      "country": "FR",
+      "status": "geopend",
+      "urls": [
+        "https://www.infos-positives.fr/sauna-flottant-nordique-brest/"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "ouverture-des-sites-de-baignade-estivale-dans-le-val-de-marne-val-de-marne-fr",
+      "title": "Ouverture des sites de baignade estivale dans le Val-de-Marne",
+      "place": "Val-de-Marne",
+      "country": "FR",
+      "status": "aangekondigd",
+      "urls": [
+        "https://www.vnf.fr/vnf/articles/ouverture-de-sites-de-baignade-dans-la-marne-pendant-lete-2026-quelles-conditions-de-navigation/"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "enquete-publique-concession-de-plage-du-veillat-saint-raphael-saint-raphael-fr",
+      "title": "Enquête publique : concession de plage du Veillat, Saint-Raphaël",
+      "place": "Saint-Raphaël",
+      "country": "FR",
+      "status": "onderzoek",
+      "urls": [
+        "https://www.var.gouv.fr/Publications/Enquetes-publiques/Enquetes-publiques-hors-ICPE/Concession-de-plage-du-Veillat-a-Saint-Raphael"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "appel-a-candidatures-dsp-pour-concessions-de-plages-a-hossegor-soorts-hossegor-f",
+      "title": "Appel à candidatures : DSP pour concessions de plages à Hossegor",
+      "place": "Soorts-Hossegor",
+      "country": "FR",
+      "status": "tender",
+      "urls": [
+        "https://www.soorts-hossegor.fr/actualites-de-la-ville/appel-candidatures-dsp-pour-lexploitation-des-concessions-des-plages"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "neuilly-sur-marne-ouverture-de-la-nouvelle-zone-de-baignade-la-rive-de-neuilly-n",
+      "title": "Neuilly-sur-Marne : Ouverture de la nouvelle zone de baignade « La Rive de Neuilly »",
+      "place": "Neuilly-sur-Marne",
+      "country": "FR",
+      "status": "aangekondigd",
+      "urls": [
+        "https://www.timeout.fr/paris/actualites/cet-ete-vous-allez-pouvoir-vous-baigner-sur-cette-nouvelle-plage-avec-deux-bassins-situee-a-30-minutes-de-paris-062526"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
     }
   ]
 }

@@ -23,6 +23,66 @@
       ],
       "firstSeen": "2026-W34",
       "lastSeen": "2026-W34"
+    },
+    {
+      "key": "ausschreibung-marina-karnin-betrieb-und-gastronomie-usedom-de",
+      "title": "Ausschreibung Marina Karnin (Betrieb und Gastronomie)",
+      "place": "Usedom",
+      "country": "DE",
+      "status": "tender",
+      "urls": [
+        "https://www.nexxt-change.org/DE/Verkaufsangebot/Detailseite/detailseite_jsp?adId=583014"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "konkretisierung-fur-neue-badestelle-au-enalster-hamburg-hamburg-de",
+      "title": "Konkretisierung für neue Badestelle Außenalster Hamburg",
+      "place": "Hamburg",
+      "country": "DE",
+      "status": "voorstel",
+      "urls": [
+        "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/aktuelles/pressemeldungen/senat-und-baederland-stellen-erste-bilder-der-moeglichen-neuen-badestelle-vor-1175834"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "betreiber-fur-restaurant-seeblick-am-perfstausee-gesucht-biedenkopf-de",
+      "title": "Betreiber für Restaurant „Seeblick“ am Perfstausee gesucht",
+      "place": "Biedenkopf",
+      "country": "DE",
+      "status": "exploitant gezocht",
+      "urls": [
+        "https://www.marburg-biedenkopf.de/Pressemitteilungen/2026/maerz/107-2026-Fuer-das-beliebte-Restaurant-Seeblick-in-Biedenkopf-Breidenstein-wird-zum-naechst-moeglichen-Zeitpunkt-ein-neuer-Betreiber-gesucht-m-w-d.php"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "saunafestival-saunasplash-2026-am-strandbad-orankesee-in-berlin-berlin-de",
+      "title": "Saunafestival Saunasplash 2026 am Strandbad Orankesee in Berlin",
+      "place": "Berlin",
+      "country": "DE",
+      "status": "aangekondigd",
+      "urls": [
+        "https://saunasplash.de/"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "eisbaden-aktion-am-dortmund-ems-kanal-munster-munster-de",
+      "title": "Eisbaden-Aktion am Dortmund-Ems-Kanal, Münster",
+      "place": "Münster",
+      "country": "DE",
+      "status": "aangekondigd",
+      "urls": [
+        "https://mobilsauna.de/"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
     }
   ]
 }

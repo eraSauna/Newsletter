@@ -55,10 +55,11 @@
       "country": "FR",
       "status": "aangekondigd",
       "urls": [
-        "https://www.vnf.fr/vnf/actualites/ouverture-de-sites-de-baignade-dans-le-val-de-marne-pendant-lete-2026-quelles-conditions-de-navigation/"
+        "https://www.vnf.fr/vnf/actualites/ouverture-de-sites-de-baignade-dans-le-val-de-marne-pendant-lete-2026-quelles-conditions-de-navigation/",
+        "https://www.vnf.fr/vnf/"
       ],
       "firstSeen": "2026-W33",
-      "lastSeen": "2026-W33"
+      "lastSeen": "2026-W36"
     },
     {
       "key": "barikenn-saona-sauna-nordique-mobile-a-penhors-penhors-pouldreuzic-fr",
@@ -503,6 +504,306 @@
       ],
       "firstSeen": "2026-W34",
       "lastSeen": "2026-W34"
+    },
+    {
+      "key": "the-albus-group-breidt-uit-met-exploitatie-van-strandpaviljoen-strand22-almere-n",
+      "title": "The Albus Group breidt uit met exploitatie van strandpaviljoen Strand22",
+      "place": "Almere",
+      "country": "NL",
+      "status": "definitief",
+      "urls": [
+        "https://www.entreemagazine.nl/nieuws/horeca/the-albus-group-breidt-uit-met-exploitatie-van-strandpaviljoen-strand22"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "zon-zee-en-strandtenten-dit-zijn-7-nieuwe-beachclubs-in-nederland-kijkduin-noord",
+      "title": "Zon, zee en strandtenten: dit zijn 7 nieuwe beachclubs in Nederland",
+      "place": "Kijkduin, Noordwijk",
+      "country": "NL",
+      "status": "geopend",
+      "urls": [
+        "https://www.entreemagazine.nl/nieuws/horeca/zon-zee-en-strandtenten-dit-zijn-7-nieuwe-beachclubs-in-nederland"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "besluit-aanwijzing-zwemlocaties-flevoland-2026-flevoland-nl",
+      "title": "Besluit aanwijzing zwemlocaties Flevoland 2026",
+      "place": "Flevoland",
+      "country": "NL",
+      "status": "definitief",
+      "urls": [
+        "https://lokaleregelgeving.overheid.nl/CVDR762932/1"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "marc-coucke-krijgt-strandconcessie-in-knokke-heist-voor-woyo-beach-knokke-heist-",
+      "title": "Marc Coucke krijgt strandconcessie in Knokke-Heist voor Woyo Beach",
+      "place": "Knokke-Heist",
+      "country": "BE",
+      "status": "aangekondigd",
+      "urls": [
+        "https://kw.be/"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "vernieuwd-strand-de-ster-met-beachbar-opent-op-1-mei-sint-niklaas-be",
+      "title": "Vernieuwd strand De Ster met beachbar opent op 1 mei",
+      "place": "Sint-Niklaas",
+      "country": "BE",
+      "status": "geopend",
+      "urls": [
+        "https://p-magazine.com/"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "officiele-start-zwemseizoen-de-plas-rotselaar-rotselaar-be",
+      "title": "Officiële start zwemseizoen 'de Plas' Rotselaar",
+      "place": "Rotselaar",
+      "country": "BE",
+      "status": "geopend",
+      "urls": [
+        "https://www.rotselaar.be/nieuws/officiele-start-van-het-zwemseizoen-op-vrijdag-1-mei"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "zwemmen-in-open-water-wordt-een-recht-vlaanderen-be",
+      "title": "Zwemmen in open water wordt een recht",
+      "place": "Vlaanderen",
+      "country": "BE",
+      "status": "aangekondigd",
+      "urls": [
+        "https://lokaalsportbeleid.be/nieuws/zwemmen-in-open-water-wordt-een-recht"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "concession-de-services-pour-les-lots-de-plage-a-saint-brevin-les-pins-saint-brev",
+      "title": "Concession de services pour les lots de plage à Saint-Brevin-les-Pins",
+      "place": "Saint-Brevin-les-Pins",
+      "country": "FR",
+      "status": "tender",
+      "urls": [
+        "https://www.francemarches.com/appels-offre/concession-plage"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "enquete-publique-sur-la-concession-de-la-plage-du-veillat-a-saint-raphael-saint-",
+      "title": "Enquête publique sur la concession de la plage du Veillat à Saint-Raphaël",
+      "place": "Saint-Raphaël",
+      "country": "FR",
+      "status": "tender",
+      "urls": [
+        "https://www.var.gouv.fr/Publications/Enquetes-publiques/Enquetes-publiques-hors-ICPE/Concession-de-plage-du-Veillat-a-Saint-Raphael"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "delegation-de-service-public-pour-la-plage-de-l-anglade-au-lavandou-le-lavandou-",
+      "title": "Délégation de service public pour la plage de l'Anglade au Lavandou",
+      "place": "Le Lavandou",
+      "country": "FR",
+      "status": "tender",
+      "urls": [
+        "https://le-lavandou.fr/delegation-de-service-public-plage-naturelle-de-langlade-plage-naturelle-de-cavaliere-2026/"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "reouverture-de-la-baignade-de-castelfranc-pour-l-ete-2026-castelfranc-fr",
+      "title": "Réouverture de la baignade de Castelfranc pour l'été 2026",
+      "place": "Castelfranc",
+      "country": "FR",
+      "status": "geopend",
+      "urls": [
+        "https://syded-lot.fr/actualites/infeau-loisirs-2026-les-nouveautes-pour-la-baignade-cet-ete"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "concession-de-lots-de-plage-saintes-maries-de-la-mer-saintes-maries-de-la-mer-fr",
+      "title": "Concession de lots de plage - Saintes-Maries-de-la-Mer",
+      "place": "Saintes-Maries-de-la-Mer",
+      "country": "FR",
+      "status": "tender",
+      "urls": [
+        "https://ted.europa.eu/en/"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "ports-de-plaisance-de-la-rade-de-toulon-modernisation-toulon-fr",
+      "title": "Ports de plaisance de la rade de Toulon : modernisation",
+      "place": "Toulon",
+      "country": "FR",
+      "status": "aangekondigd",
+      "urls": [
+        "https://tpm-agglo.fr/"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "betreiber-suche-fur-hybrid-gastronomie-mit-eventflache-de",
+      "title": "Betreiber-Suche für Hybrid-Gastronomie mit Eventfläche",
+      "place": "",
+      "country": "DE",
+      "status": "exploitant gezocht",
+      "urls": [
+        "https://www.nexxt-change.org/DE/Suche/Ergebnisse/Unternehmenssuche/Detail/index.html?id=237248"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "pachtersuche-freizeitbetrieb-in-wassernahe-ostseekuste-ostseekuste-tussen-lubeck",
+      "title": "Pächtersuche Freizeitbetrieb in Wassernähe (Ostseeküste)",
+      "place": "Ostseeküste (tussen Lübeck en Wismar)",
+      "country": "DE",
+      "status": "exploitant gezocht",
+      "urls": [
+        "https://www.immobilo.de/gewerbe/gastronomie-pachten/mecklenburg-vorpommern"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "ausschreibung-der-pacht-und-des-betriebs-der-marina-karnin-usedom-de",
+      "title": "Ausschreibung der Pacht und des Betriebs der Marina Karnin",
+      "place": "Usedom",
+      "country": "DE",
+      "status": "tender",
+      "urls": [
+        "https://www.nexxt-change.org/DE/Verkaufsangebot/Detailseite/detailseite_jsp?adId=583014"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "ratzeburger-strandbad-an-der-schlo-wiese-startet-mit-badebetrieb-ratzeburg-de",
+      "title": "Ratzeburger Strandbad an der Schloßwiese startet mit Badebetrieb",
+      "place": "Ratzeburg",
+      "country": "DE",
+      "status": "geopend",
+      "urls": [
+        "https://herzogtum-direkt.de/ratzeburger-strandbad-an-der-schlosswiese-startet-mit-dem-badebetrieb/"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "eisbaden-aktion-am-dortmund-ems-kanal-munster-de",
+      "title": "Eisbaden-Aktion am Dortmund-Ems-Kanal",
+      "place": "Münster",
+      "country": "DE",
+      "status": "aangekondigd",
+      "urls": [
+        "https://mobilsauna.de/"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "a-striking-waterfront-bathhouse-is-set-to-open-in-copenhagen-in-2026-kopenhagen-",
+      "title": "A striking waterfront bathhouse is set to open in Copenhagen in 2026",
+      "place": "Kopenhagen",
+      "country": "DK",
+      "status": "aangekondigd",
+      "urls": [
+        "https://www.timeout.com/copenhagen/news/a-striking-waterfront-bathhouse-is-set-to-open-in-this-european-city-in-2026-060126"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "cubo-vinder-vandsportens-hus-pa-s-by-havn-s-by-dk",
+      "title": "Cubo vinder Vandsportens Hus på Sæby Havn",
+      "place": "Sæby",
+      "country": "DK",
+      "status": "definitief",
+      "urls": [
+        "https://www.hogk.dk/nyheder/cubo-vinder-vandsportens-hus-pa-saeby-havn/"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "shores-langeland-dette-projekt-ejer-vi-alle-sammen-bagenkop-dk",
+      "title": "SHORES Langeland: ”Dette projekt ejer vi alle sammen”",
+      "place": "Bagenkop",
+      "country": "DK",
+      "status": "definitief",
+      "urls": [
+        "https://friluftsraadet.dk/aktuelt/shores-langeland-dette-projekt-ejer-vi-alle-sammen"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "vlaanderen-erkent-10-nieuwe-openwaterzwemzones-waaronder-vossemeren-en-bastion-l",
+      "title": "Vlaanderen erkent 10 nieuwe openwaterzwemzones waaronder Vossemeren en Bastion",
+      "place": "Lommel en Kinrooi",
+      "country": "BE",
+      "status": "definitief",
+      "urls": [
+        "https://www.tvl.be/"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "ouverture-de-nouveaux-sites-de-baignade-en-ile-de-france-ile-de-france-fr",
+      "title": "Ouverture de nouveaux sites de baignade en Île-de-France",
+      "place": "Île-de-France",
+      "country": "FR",
+      "status": "aangekondigd",
+      "urls": [
+        "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/reouverture-des-sites-de-baignade-en-ile-de-france-a13502.html"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "senat-und-baderland-stellen-plane-fur-neue-badestelle-au-enalster-vor-hamburg-de",
+      "title": "Senat und Bäderland stellen Pläne für neue Badestelle Außenalster vor",
+      "place": "Hamburg",
+      "country": "DE",
+      "status": "voorstel",
+      "urls": [
+        "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/wasser/badegewaesser/senat-und-baederland-stellen-erste-bilder-der-moeglichen-neuen-badestelle-vor-56540"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
+    },
+    {
+      "key": "hot-ticket-uk-s-first-sauna-theatre-draws-swimwear-clad-audiences-edinburgh-uk",
+      "title": "Hot ticket: UK's first sauna theatre draws swimwear-clad audiences",
+      "place": "Edinburgh",
+      "country": "UK",
+      "status": "geopend",
+      "urls": [
+        "https://www.theguardian.com/stage/article/2026/aug/27/uk-first-sauna-theatre-edinburgh-fringe"
+      ],
+      "firstSeen": "2026-W36",
+      "lastSeen": "2026-W36"
     }
   ]
 }
