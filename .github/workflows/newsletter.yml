@@ -1,7 +1,7 @@
 name: Newsletter
 
 # Elke maandag; run-edition.mjs bouwt alleen in EVEN ISO-weken (tenzij force=true).
-# Drie edities: hoofd (NL/BE/FR/DE + UK/DK), Frankrijk (FR), Duitsland (DE).
+# Vier edities: hoofd (NL/BE/FR/DE + UK/DK), Frankrijk (FR), Duitsland (DE), Spanje/Portugal (iberia).
 # Hoofdmail draait EERST en zonder continue-on-error; fr/de erna op continue-on-error.
 # test_to: overschrijft alle ontvangers (voor veilig testen naar je eigen inbox).
 
@@ -60,12 +60,12 @@ jobs:
           DIR=$(echo "$OUT" | sed -n 's/^EDITIONDIR=//p'); SUBJ=$(echo "$OUT" | sed -n 's/^SUBJECT=//p')
           [ -z "$DIR" ] && { echo "geen editie deze week"; exit 0; }
           python3 md-to-email.py "$DIR/newsletter.md" > "$DIR/newsletter.html"
-          if [ "${{ github.event_name == 'schedule' || inputs.send == 'true' }}" = "true" ]; then
+          if [ "${{ github.event_name == 'schedule' || inputs.send }}" = "true" ]; then
             TO="${{ inputs.test_to }}"; [ -z "$TO" ] && TO="$NEWSLETTER_TO_DEFAULT"
             NEWSLETTER_TO="$TO" node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"
           fi
 
-      - name: Frankrijk-editie (Frans)
+      - name: Frankrijk-editie (Nederlands)
         continue-on-error: true
         env:
           PROFILE: fr
@@ -75,12 +75,12 @@ jobs:
           DIR=$(echo "$OUT" | sed -n 's/^EDITIONDIR=//p'); SUBJ=$(echo "$OUT" | sed -n 's/^SUBJECT=//p')
           [ -z "$DIR" ] && { echo "geen editie deze week"; exit 0; }
           python3 md-to-email.py "$DIR/newsletter.md" > "$DIR/newsletter.html"
-          if [ "${{ (github.event_name == 'schedule' && vars.AUTOSEND_PARTNERS == 'true') || inputs.send == 'true' }}" = "true" ]; then
+          if [ "${{ github.event_name == 'schedule' || inputs.send }}" = "true" ]; then
             TO="${{ inputs.test_to }}"; [ -z "$TO" ] && TO="$NEWSLETTER_TO_DEFAULT"
             NEWSLETTER_TO="$TO" node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"
           fi
 
-      - name: Duitsland-editie (Duits)
+      - name: Duitsland-editie (Nederlands)
         continue-on-error: true
         env:
           PROFILE: de
@@ -90,7 +90,22 @@ jobs:
           DIR=$(echo "$OUT" | sed -n 's/^EDITIONDIR=//p'); SUBJ=$(echo "$OUT" | sed -n 's/^SUBJECT=//p')
           [ -z "$DIR" ] && { echo "geen editie deze week"; exit 0; }
           python3 md-to-email.py "$DIR/newsletter.md" > "$DIR/newsletter.html"
-          if [ "${{ (github.event_name == 'schedule' && vars.AUTOSEND_PARTNERS == 'true') || inputs.send == 'true' }}" = "true" ]; then
+          if [ "${{ github.event_name == 'schedule' || inputs.send }}" = "true" ]; then
+            TO="${{ inputs.test_to }}"; [ -z "$TO" ] && TO="$NEWSLETTER_TO_DEFAULT"
+            NEWSLETTER_TO="$TO" node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"
+          fi
+
+      - name: Spanje/Portugal-editie (Nederlands)
+        continue-on-error: true
+        env:
+          PROFILE: iberia
+          NEWSLETTER_TO_DEFAULT: henrycoatesthamen@gmail.com,info@erasauna.nl
+        run: |
+          OUT=$(node run-edition.mjs); echo "$OUT"
+          DIR=$(echo "$OUT" | sed -n 's/^EDITIONDIR=//p'); SUBJ=$(echo "$OUT" | sed -n 's/^SUBJECT=//p')
+          [ -z "$DIR" ] && { echo "geen editie deze week"; exit 0; }
+          python3 md-to-email.py "$DIR/newsletter.md" > "$DIR/newsletter.html"
+          if [ "${{ github.event_name == 'schedule' || inputs.send }}" = "true" ]; then
             TO="${{ inputs.test_to }}"; [ -z "$TO" ] && TO="$NEWSLETTER_TO_DEFAULT"
             NEWSLETTER_TO="$TO" node send-newsletter.mjs "$DIR/newsletter.html" "$SUBJ"
           fi

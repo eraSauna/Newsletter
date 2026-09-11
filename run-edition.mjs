@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-// Orchestrator — één editie voor één PROFIEL (main/fr/de). Vier-lagen-funnel:
+// Orchestrator — één editie voor één PROFIEL (main/fr/de/iberia). Vier-lagen-funnel:
 //   collect (per profiel-scope) -> filter -> dedup (eigen geheugen) -> read + audit -> Opus.
 // Draait alleen in even ISO-weken (tenzij FORCE_EDITION=true). Verstuurt NIETS
 // (dat doet de workflow apart). Elk profiel heeft eigen scope, taal, geheugen en pad.
 //
-// PROFILE=main|fr|de (default main). Keys: GOOGLE_API_KEY (1-3), ANTHROPIC_API_KEY (4).
+// PROFILE=main|fr|de|iberia (default main). Keys: GOOGLE_API_KEY (1-3), ANTHROPIC_API_KEY (4).
 
 import { mkdir, writeFile } from "node:fs/promises";
 import { join, dirname } from "node:path";
@@ -61,28 +61,32 @@ async function main() {
     markets: profile.markets,
     trendwatch: profile.trendwatch && activeKeys.includes("trendwatch"),
     filterModel: MODELS.filter,
+    focus: profile.focus,
     ledger,
   });
   console.log(`[${PROFILE}/collect] ${candidates.length} kandidaten`);
 
-  const { kept, rejected } = await filterCandidates({ candidates, model: MODELS.filter, ledger });
+  const { kept, rejected } = await filterCandidates({ candidates, model: MODELS.filter, ledger, focus: profile.focus });
   console.log(`[${PROFILE}/filter] ${kept.length} door, ${rejected.length} afgewezen`);
 
   const { newItems, updates, droppedRepeat } = await dedupAgainstSeen({ candidates: kept, seen, model: MODELS.filter, ledger });
   console.log(`[${PROFILE}/geheugen] ${newItems.length} nieuw, ${updates.length} updates, ${droppedRepeat} al behandeld`);
 
-  const findings = await readItems({ items: [...newItems, ...updates], model: MODELS.reader, ledger });
+  const findings = await readItems({ items: [...newItems, ...updates], model: MODELS.reader, ledger, focus: profile.focus });
   console.log(`[${PROFILE}/read] ${findings.length} findings`);
 
-  const audit = await auditRejected({ rejected, size: AUDIT_SAMPLE_SIZE, model: MODELS.auditor, ledger });
+  const audit = await auditRejected({ rejected, size: AUDIT_SAMPLE_SIZE, model: MODELS.auditor, ledger, focus: profile.focus });
   console.log(`[${PROFILE}/audit] ${audit.checked} gecontroleerd, ${audit.missed.length} mogelijk gemist`);
 
-  const meta = { week, editionLabel, periodStart, periodEnd, publishDate, active, marketsLabel: profile.marketsLabel };
+  const editionSections = profile.sectionKeys
+    ? profile.sectionKeys.map((key) => active.find((block) => block.key === key)).filter(Boolean)
+    : active;
+  const meta = { week, editionLabel, periodStart, periodEnd, publishDate, active: editionSections, marketsLabel: profile.marketsLabel };
   const { markdown } = await synthesize({
     model: MODELS.editorial,
     meta,
     findings,
-    promptPath: join(ROOT, "EDITORIAL-PROMPT.md"),
+    promptPath: join(ROOT, profile.promptFile || "EDITORIAL-PROMPT.md"),
     ledger,
     language: profile.language,
   });
