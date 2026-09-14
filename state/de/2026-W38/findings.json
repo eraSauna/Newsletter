@@ -1,0 +1,36 @@
+[
+  {
+    "relevant": true,
+    "block": "locations",
+    "title": "Eröffnung der Marina Monaco am Frankfurter Ring, München",
+    "summary": "Die Hammer AG hat am 20. Mai 2026 die Marina Monaco als temporäre Zwischennutzung auf dem Areal Neue Schmiede in München-Schwabing eröffnet. Das 55.000 m² große Areal bietet einen künstlichen See, Strandflächen, Gastronomie und Sportangebote.",
+    "score": 75,
+    "action": "Contact Hammer AG / Sylvenstein Event GmbH for potential placement of a mobile outdoor drop-in sauna at the temporary lake area.",
+    "country": "DE",
+    "date": "2026-05-20",
+    "place": "München",
+    "priority": "B",
+    "status": "geopend",
+    "type": "Zwischennutzung / Stadtstrand mit See",
+    "why": "Neue temporäre Outdoor-Freizeitanlage mit See und Strandfläche in München; idealer Standort für verplatzbare Outdoor-Saunas während der Zwischennutzung.",
+    "source": "https://assetphysics.com/the-north-is-coming-hammer-ag-opens-munichs-first-marina-with-marina-monaco-and-starts-marketing-of-the-neue-schmiede/",
+    "update": false
+  },
+  {
+    "relevant": true,
+    "block": "swimming",
+    "title": "Hamburg plant neue Badestelle am Schwanenwik (Außenalster)",
+    "summary": "Het stadsbestuur van Hamburg en Bäderland hebben plannen gepresenteerd voor een nieuw openbaar natuurbad aan de Schwanenwik (Außenalster) naar Scandinavisch model.",
+    "score": 85,
+    "action": "Verkennen van mogelijkheden bij Bäderland en de gemeente Hamburg voor het plaatsen van een verplaatsbare sauna bij deze nieuwe zwemlocatie.",
+    "country": "DE",
+    "date": "2026-05-18",
+    "place": "Hamburg",
+    "priority": "A",
+    "status": "aangekondigd",
+    "type": "natuurbad",
+    "why": "Nieuwe openwaterzwemlocatie in Hamburg (DE) biedt uitstekende potentie voor een drop-in saunaconcept bij koudwaterzwemmers.",
+    "source": "https://www.hamburg.de/pressearchiv-fhh/17234832/senat-und-baederland-stellen-erste-bilder-der-moeglichen-neuen-badestelle-vor/",
+    "update": true
+  }
+]

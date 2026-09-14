@@ -1,0 +1,28 @@
+{
+  "developments": [
+    {
+      "key": "sauna-tramuntana-outdoor-drop-in-sauna-en-cold-plunge-op-mallorca-bunyola-palma-",
+      "title": "Sauna Tramuntana: Outdoor drop-in sauna en cold plunge op Mallorca",
+      "place": "Bunyola / Palma, Mallorca",
+      "country": "Spanje",
+      "status": "geopend",
+      "urls": [
+        "https://www.saunatramuntana.com/"
+      ],
+      "firstSeen": "2026-W38",
+      "lastSeen": "2026-W38"
+    },
+    {
+      "key": "tijdelijke-urban-pop-upsauna-round-about-baths-op-rotonde-in-logrono-logrono-spa",
+      "title": "Tijdelijke urban pop-upsauna 'Round about baths' op rotonde in Logroño",
+      "place": "Logroño",
+      "country": "Spanje",
+      "status": "pilot",
+      "urls": [
+        "https://efe.com/la-rioja/2025-06-22/una-sauna-dentro-de-una-rotonda-de-logrono-cuestiona-la-relacion-de-la-ciudad-y-el-coche-2/"
+      ],
+      "firstSeen": "2026-W38",
+      "lastSeen": "2026-W38"
+    }
+  ]
+}

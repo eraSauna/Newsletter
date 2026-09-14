@@ -107,6 +107,66 @@
       ],
       "firstSeen": "2026-W36",
       "lastSeen": "2026-W36"
+    },
+    {
+      "key": "la-guinguette-de-montbazon-heropent-voor-seizoen-2026-aan-de-indre-montbazon-fr",
+      "title": "La Guinguette de Montbazon heropent voor seizoen 2026 aan de Indre",
+      "place": "Montbazon",
+      "country": "FR",
+      "status": "aangekondigd",
+      "urls": [
+        "https://guinguette-montbazon.fr/"
+      ],
+      "firstSeen": "2026-W38",
+      "lastSeen": "2026-W38"
+    },
+    {
+      "key": "ouverture-du-port-de-plaisance-seine-parisii-cormeilles-en-parisis-fr",
+      "title": "Ouverture du port de plaisance Seine Parisii",
+      "place": "Cormeilles-en-Parisis",
+      "country": "FR",
+      "status": "aangekondigd",
+      "urls": [
+        "https://seine-parisii.fr/actus/le-port-accueillera-son-premier-bateau"
+      ],
+      "firstSeen": "2026-W38",
+      "lastSeen": "2026-W38"
+    },
+    {
+      "key": "appel-a-candidatures-dsp-pour-l-exploitation-des-concessions-des-plages-de-soort",
+      "title": "Appel à candidatures : DSP pour l'exploitation des concessions des plages de Soorts-Hossegor",
+      "place": "Soorts-Hossegor",
+      "country": "FR",
+      "status": "tender",
+      "urls": [
+        "https://soorts-hossegor.fr/actualites/appel-a-candidatures-dsp-pour-lexploitation-des-concessions-des-plages/"
+      ],
+      "firstSeen": "2026-W38",
+      "lastSeen": "2026-W38"
+    },
+    {
+      "key": "enquete-publique-concession-de-la-plage-naturelle-du-veillat-a-saint-raphael-sai",
+      "title": "Enquête publique : concession de la plage naturelle du Veillat à Saint-Raphaël",
+      "place": "Saint-Raphaël",
+      "country": "FR",
+      "status": "tender",
+      "urls": [
+        "https://www.var.gouv.fr/Actions-de-l-Etat/Mer-littoral-et-securite-maritime/Enquetes-publiques/Concessions-de-plage/Concession-de-plage-du-Veillat-a-Saint-Raphael"
+      ],
+      "firstSeen": "2026-W38",
+      "lastSeen": "2026-W38"
+    },
+    {
+      "key": "reouverture-des-sites-de-baignade-en-ile-de-france-pour-l-ete-2026-ile-de-france",
+      "title": "Réouverture des sites de baignade en Île-de-France pour l'été 2026",
+      "place": "Île-de-France",
+      "country": "FR",
+      "status": "aangekondigd",
+      "urls": [
+        "https://www.prefectures-regions.gouv.fr/ile-de-france/Actualites/Reouverture-des-sites-de-baignade-en-Ile-de-France-8-sites-ouverts-pour-la-saison-2026"
+      ],
+      "firstSeen": "2026-W38",
+      "lastSeen": "2026-W38"
     }
   ]
 }

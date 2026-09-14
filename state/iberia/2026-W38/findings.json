@@ -1,0 +1,36 @@
+[
+  {
+    "relevant": true,
+    "block": "competitors",
+    "title": "Sauna Tramuntana: Outdoor drop-in sauna en cold plunge op Mallorca",
+    "summary": "Sauna Tramuntana biedt op Mallorca (regio Palma en Bunyola) mobiele saunaverhuur en wekelijkse outdoor drop-in saunasessies met koudwaterbaden aan vanaf 10 euro per sessie.",
+    "score": 85,
+    "action": "Monitoren als directe concurrentie en marktvalidatie voor outdoor drop-in sauna concepten op Mallorca.",
+    "country": "Spanje",
+    "date": "2026",
+    "place": "Bunyola / Palma, Mallorca",
+    "priority": "A",
+    "status": "geopend",
+    "type": "outdoor drop-in sauna",
+    "why": "Concrete outdoor drop-in saunalocatie met koud water bathing in Spanje (Mallorca), wat exact binnen de editiefocus van eräSauna valt.",
+    "source": "https://www.saunatramuntana.com/",
+    "update": false
+  },
+  {
+    "relevant": true,
+    "block": "locations",
+    "title": "Tijdelijke urban pop-upsauna 'Round about baths' op rotonde in Logroño",
+    "summary": "Als onderdeel van het architectuurfestival Concéntrico in Logroño is een tijdelijke, gratis toegankelijke outdoor sauna geplaatst op een rotonde aan de Gran Vía. Het houten pop-upproject van Leopold Banchini werkt met gratis drop-in sessies van 45 minuten via Eventbrite.",
+    "score": 75,
+    "action": "Inspiratie opdoen over tijdelijke houten urban pop-upsauna's en waterlocaties in de openbare ruimte in Spanje.",
+    "country": "Spanje",
+    "date": "2025-06-22",
+    "place": "Logroño",
+    "priority": "B",
+    "status": "pilot",
+    "type": "pop-up sauna",
+    "why": "Direct relevante outdoor pop-up sauna-interventie in een Spaanse stad met publieke toegankelijkheid.",
+    "source": "https://efe.com/la-rioja/2025-06-22/una-sauna-dentro-de-una-rotonda-de-logrono-cuestiona-la-relacion-de-la-ciudad-y-el-coche-2/",
+    "update": false
+  }
+]

@@ -83,6 +83,30 @@
       ],
       "firstSeen": "2026-W36",
       "lastSeen": "2026-W36"
+    },
+    {
+      "key": "eroffnung-der-marina-monaco-am-frankfurter-ring-munchen-munchen-de",
+      "title": "Eröffnung der Marina Monaco am Frankfurter Ring, München",
+      "place": "München",
+      "country": "DE",
+      "status": "geopend",
+      "urls": [
+        "https://assetphysics.com/the-north-is-coming-hammer-ag-opens-munichs-first-marina-with-marina-monaco-and-starts-marketing-of-the-neue-schmiede/"
+      ],
+      "firstSeen": "2026-W38",
+      "lastSeen": "2026-W38"
+    },
+    {
+      "key": "hamburg-plant-neue-badestelle-am-schwanenwik-au-enalster-hamburg-de",
+      "title": "Hamburg plant neue Badestelle am Schwanenwik (Außenalster)",
+      "place": "Hamburg",
+      "country": "DE",
+      "status": "aangekondigd",
+      "urls": [
+        "https://www.hamburg.de/pressearchiv-fhh/17234832/senat-und-baederland-stellen-erste-bilder-der-moeglichen-neuen-badestelle-vor/"
+      ],
+      "firstSeen": "2026-W38",
+      "lastSeen": "2026-W38"
     }
   ]
 }
